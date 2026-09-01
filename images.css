@@ -1,0 +1,310 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+body {
+    font-family: Arial, sans-serif;
+    align-items: center;
+    background: linear-gradient(to right, #f64f59, #c471ed, #12c2e9);
+    background-size: cover;
+    background-position: center;
+}
+
+header {
+    position: fixed;
+    padding: 1.3rem 9%;
+}
+
+.navigation ul {
+    
+    margin-left: 40px;
+}
+
+.navigation li a {
+    position: relative;
+    font-size: 1.1em;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 10px;
+}
+
+
+
+/* Style for the search input */
+#searchInput {
+    margin-top: 0px;
+    margin-left: 20px; /* Adjust this margin to position the search bar accordingly */
+    width: 17%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+
+.icons{
+    font-size: 2.0rem;
+    color: #ccc;
+    cursor: pointer;
+    padding-left: 40px;
+    
+}
+
+
+
+/* Style for the highlighted name */
+.highlight h3 {
+    color: red;
+}
+
+.suggestions {
+    position: relative;
+}
+  
+.suggestion {
+    cursor: pointer;
+    padding: 5px;
+}
+  
+.suggestion:hover {
+    background-color: #f0f0f0;
+}
+  
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 20px;
+    margin-top: 5cm;
+}
+
+.person {
+    margin-top: 5cm;
+    margin: 20px;
+    text-align: center;
+    max-width: 300px; /* Limit width of the person container */
+    background-color: #fff; /* Ensure a white background for better contrast */
+    padding: 15px; /* Add some padding */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease; /* Smooth transition */
+}
+
+.person:hover {
+    transform: scale(1.05); /* Slightly increase size on hover */
+}
+
+/*
+.person p{
+    font-size: 10px;
+}
+
+.person h3{
+    font-size: 10px;
+} */
+
+.show-info {
+    margin: 20px;
+    text-align: center;
+    background-color: #f5f5f5;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.responsive-image {
+    max-width: 200px;
+    height: auto;
+    cursor: pointer;
+}
+
+.responsive-image:hover {
+    transform: scale(1.05);
+}
+
+
+  
+
+
+
+.arrow-up:hover {
+    background-color: blue;
+}
+
+/*responsiveness*/
+@media (max-width: 1242px) {
+    .navigation li a {
+        
+        font-size: 1.0em;
+        
+    }
+}
+
+@media (max-width: 1186px) {
+    .navigation li a {
+        
+        font-size: 0.9em;
+        
+    }
+
+    #searchInput {
+        width: 17%;
+        font-size: 13px;
+        
+    }
+}
+
+@media (max-width: 1131px) {
+    .navigation li a {
+        
+        font-size: 0.85em;
+        
+    }
+
+    #searchInput {
+        width: 17%;
+        font-size: 13px;
+        
+    }
+}
+
+@media (max-width: 1103px) {
+    .navigation li a {
+        
+        font-size: 0.80em;
+        
+    }
+
+    #searchInput {
+        width: 17%;
+        font-size: 12px;
+        
+    }
+}
+
+@media (max-width: 1077px) {
+    .navigation li a {
+        
+        font-size: 0.75em;
+        
+    }
+
+    #searchInput {
+        width: 17%;
+        font-size: 11px;
+        
+    }
+}
+
+@media (max-width: 1077px) {
+    .navigation li a {
+        
+        font-size: 0.70em;
+        
+    }
+
+    #searchInput {
+        width: 16%;
+        font-size: 11px;
+        
+    }
+
+    .navigation ul {
+    
+        margin-left: 20px;
+    }
+
+    .person {
+        max-width: 300px; /* Limit width of the person container */
+        padding: 10px; /* Add some padding */
+        
+    }
+}
+
+
+@media (max-width: 992px) {
+    
+
+    .navigation ul {
+        margin-left: 0px;
+    }
+
+    .navigation li a {
+        font-size: 1.1rem;
+       
+    }  
+
+    #searchInput {
+        width: 13%;
+        margin-left: 11.6cm;
+        display: block;
+        font-size: 13px;
+        text-align: center;
+        transition: .3s ease;
+        
+    }
+
+    #check:checked~#searchInput {
+        
+        transition-delay: calc(.15s * var(--i));
+        
+    }
+
+    #check:checked~.navigation ul{
+        height: 20.0rem;
+    }
+
+    .logo h2{
+        color: black;
+        
+    }
+
+    .icons{
+        color: black;
+    }
+}
+
+
+@media (max-width: 894px) {
+    
+    .person {
+        max-width: 250px; /* Limit width of the person container */
+        padding: 10px; /* Add some padding */
+        
+    }
+
+    .navigation li a {
+        font-size: 1.0rem;
+       
+    }  
+
+    #searchInput {
+        position: fixed;
+        width: 12%;
+        font-size: 11px;
+        margin-left: 11.6cm;
+        
+    }
+
+    #check:checked~.navigation ul{
+        height: 20rem;
+    }
+
+    .logo h2{
+        color: black;
+        
+    }
+
+    .icons{
+        color: black;
+    }
+}

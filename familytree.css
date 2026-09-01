@@ -1,0 +1,315 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url('background/png.png') no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.3rem 9%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+}
+
+.navigation ul {
+    
+    margin-left: 40px;
+}
+
+
+.navigation li a {
+    position: relative;
+    font-size: 1.1em;
+    color: red;
+    text-decoration: none;
+    font-weight: 700;
+    margin-left: 10px;
+}
+
+.icons{
+    font-size: 2.0rem;
+    color: red;
+    cursor: pointer;
+    padding-left: 40px;
+    
+}
+
+
+/* Style for the search input */
+#searchInput {
+    margin-top: 0px;
+    margin-left: 20px; /* Adjust this margin to position the search bar accordingly */
+    width: 17.5%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+
+/* Style for the highlighted name */
+.highlight h3 {
+    background-color: red;
+}
+
+.suggestions {
+    position: relative;
+}
+  
+.suggestion {
+    cursor: pointer;
+    padding: 5px;
+}
+  
+.suggestion:hover {
+    background-color: #f0f0f0;
+}
+
+
+
+
+
+.logo h2 {
+    
+    font-size: 2em;
+    color: blue;
+    user-select: none;
+    /* Add styles for the logo */
+}
+
+
+/*----------------genealogy-scroll----------*/
+
+.genealogy-scroll::-webkit-scrollbar {
+    width: 5px;
+    height: 8px;
+}
+.genealogy-scroll::-webkit-scrollbar-track {
+    border-radius: 10px;
+    background-color: #e4e4e4;
+}
+.genealogy-scroll::-webkit-scrollbar-thumb {
+    background: #212121;
+    border-radius: 10px;
+    transition: 0.5s;
+}
+.genealogy-scroll::-webkit-scrollbar-thumb:hover {
+    background:  #d5b14c;
+    transition: 0.5s;
+}
+
+
+/*----------------genealogy-tree----------*/
+.genealogy-body{
+    margin-top: 100px;
+    white-space: nowrap;
+    overflow-y: hidden;
+    padding: 50px;
+    min-height: 500px;
+    padding-top: 10px;
+}
+.genealogy-tree ul {
+    margin-top: auto;
+    padding-top: 20px; 
+    position: relative;
+    padding-left: 0px;
+    display: flex;
+}
+.genealogy-tree li {
+    float: left; text-align: center;
+    list-style-type: none;
+    position: relative;
+    padding: 20px 5px 0 5px;
+}
+.genealogy-tree li::before, .genealogy-tree li::after{
+    content: '';
+    position: absolute; 
+    top: 0; 
+    right: 50%;
+    border-top: 4px solid #ccc;
+    width: 50%; 
+    height: 18px;
+}
+.genealogy-tree li::after{
+    right: auto; left: 50%;
+    border-left: 4px solid #ccc;
+}
+.genealogy-tree li:only-child::after, .genealogy-tree li:only-child::before {
+    display: none;
+}
+.genealogy-tree li:only-child{ 
+    padding-top: 0;
+}
+.genealogy-tree li:first-child::before, .genealogy-tree li:last-child::after{
+    border: 0 none;
+}
+.genealogy-tree li:last-child::before{
+    border-right: 4px solid #ccc;
+    border-radius: 0 5px 0 0;
+    -webkit-border-radius: 0 5px 0 0;
+    -moz-border-radius: 0 5px 0 0;
+}
+.genealogy-tree li:first-child::after{
+    border-radius: 5px 0 0 0;
+    -webkit-border-radius: 5px 0 0 0;
+    -moz-border-radius: 5px 0 0 0;
+}
+.genealogy-tree ul ul::before{
+    content: '';
+    position: absolute; top: 0; left: 50%;
+    border-left: 4px solid #ccc;
+    width: 0; height: 20px;
+}
+.genealogy-tree li a{
+    text-decoration: none;
+    color: black;
+    font-weight: 900;
+    font-family: arial, verdana, tahoma;
+    font-size: 20px;
+    display: inline-block;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+}
+
+.genealogy-tree li a:hover+ul li::after, 
+.genealogy-tree li a:hover+ul li::before, 
+.genealogy-tree li a:hover+ul::before, 
+.genealogy-tree li a:hover+ul ul::before{
+    border-color:  #fbba00;
+}
+
+/*--------------memeber-card-design----------*/
+.member-view-box{
+    margin-top: auto;
+    padding:0px 20px;
+    text-align: center;
+    border-radius: 4px;
+    position: relative;
+    z-index: 1;
+}
+.member-image{
+    margin-top: auto;
+    width: 200px;
+    position: relative;
+    z-index: 1;
+}
+.member-image img{
+    width: 200px;
+    height: 200px;
+    border-radius: 6px;
+    background-color :#000;
+    z-index: 2;
+}
+
+.member-image img:hover {
+    transform: scale(1.05); /* Slightly increase size on hover */
+}
+
+/*responsiveness*/
+@media (max-width: 1200px) {
+    
+    .navigation li a {
+        font-size: 1.0rem;
+    }  
+
+    #searchInput {
+        width: 17.5%;
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 1044px) {
+    
+    .navigation li a {
+        font-size: .9rem;
+    }  
+
+    #searchInput {
+        width: 17.5%;
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 996px) {
+    
+    .navigation li a {
+        font-size: .85rem;
+    }  
+
+    #searchInput {
+        width: 17.5%;
+        font-size: 13px;
+    }
+}
+
+
+@media (max-width: 992px) {
+
+    .navigation ul {
+        margin-left: 0px;
+    }
+
+    .navigation li a {
+        font-size: 1.1rem;
+       
+    } 
+
+    #check:checked~.navigation ul{
+        height: 20.1rem;
+    }
+
+    #searchInput {
+        margin-left: 418px; /* Adjust this margin to position the search bar accordingly */
+        width: 17%;
+        font-size: 16px;
+        
+    }    
+}
+
+@media (max-width: 802px){
+    .member-image img{
+        width: 150px;
+        height: 150px;
+    }
+
+    .genealogy-tree li a{
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 500px) {
+    .member-image img{
+        width: 100px;
+        height: 100px;
+    }
+
+    .genealogy-tree li a{
+        font-size: 10px;
+    }
+
+    
+}
+

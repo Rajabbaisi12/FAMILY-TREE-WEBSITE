@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MY FAMILY CLAN TREE</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+   
+    <header>
+        <div class="logo">
+            <h2>logo</h2>
+        </div>
+
+
+        <input type="checkbox" id="check">
+        <label for="check" class="icons">
+            <i class='bx bx-menu' id="menu-icon"></i>
+            <i class='bx bx-x' id="close-icon"></i>
+        </label>
+
+
+
+
+
+
+        <nav class="navigation">
+            <ul>
+                <li><a href="home.html" style="--i:0;" class="nav-item nav-link">Home</a></li>
+                <li><a href="about.html" style="--i:1;" class="nav-item nav-link active">About</a></li>
+                <li><a href="family tree.html" style="--i:2;" class="nav-item nav-link">Family Tree</a></li>
+                <li><a href="images.html" style="--i:3;" class="nav-item nav-link">Gallery</a></li>
+                <li><a href="contact.html" style="--i:4;" class="nav-item nav-link">Contact</a></li>
+            </ul>
+            
+        </nav>
+    </header>
+
+    <div class="contactUs">
+        <div class="title">
+            <h2>Contact Us</h2>
+        </div>
+        <div class="box">
+            <!--form-->
+            <div class="contact form">
+                <h3>Send a message</h3>
+                <form>
+                    <div class="formBox">
+                        <div class="row100">
+                            <div class="inputBox">
+                                <span>Name</span>
+                                <input type="text" id="name" placeholder="e.g John Doe">
+                            </div>
+                            <!--div class="inputBox">
+                                <span>Last Name</span>
+                                <input type="text" id="lastname" placeholder="Doe">
+                            </div-->
+                        </div>
+
+                        <div class="row500">
+                            <div class="inputBox">
+                                <span>Email</span>
+                                <input type="text" id="email" placeholder="johndoe@gmail.com">
+                            </div>
+                            <div class="inputBox">
+                                <span>Subject</span>
+                                <input type="text" id="subject" placeholder="Subject">
+                            </div>
+                        </div>
+
+                        <div class="row100">
+                            <div class="inputBox">
+                                <span>Message</span>
+                                <textarea id="message" placeholder="Write your message here..."></textarea>
+                            </div>
+                        </div>
+
+                        <div class="row100">
+                            <div class="inputBox">
+                                <!--input type="submit" value="Send"-->
+
+                                <button onclick="sendMessage();">Send</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <!--info Box-->
+            <div class="contact info">
+                <h3>Contact Info</h3>
+                <div class="infoBox">
+                    <div>
+                        <span><ion-icon name="location"></ion-icon></span>
+                        <p>Nawandala, Kaliro <br>UGANDA</p>
+                    </div>
+                    <div>
+                        <span><ion-icon name="mail"></ion-icon></span>
+                        <a href="mailto:nawandalaclan@gmail.com">nawandalaclan@gmail.com</a>
+                    </div>
+                    <div>
+                        <span><ion-icon name="call"></ion-icon></span>
+                        <a href="tel:+256123456789">+256 123456789</a>
+                    </div>
+                    <!--social media links-->
+                    <ul class="sci">
+                        <li><a href="#"><ion-icon name="logo-facebook"></ion-icons></a></li>
+                        <li><a href="#"><ion-icon name="logo-twitter"></ion-icons></a></li>
+                        <li><a href="#"><ion-icon name="logo-instagram"></ion-icons></a></li>
+                        <li><a href="#"><ion-icon name="logo-whatsapp"></ion-icons></a></li>
+                        <li><a href="#"><ion-icon name="logo-google"></ion-icons></a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!--map-->
+            <div class="contact map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15957.583592435845!2d33.
+                380100175531766!3d0.8337546836178213!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.
+                1!3m3!1m2!1s0x177eb9270a8e9659%3A0x9b4374aeccae8e0c!2sNawandala!5e0!3m2!1sen!2sug
+                !4v1701124954933!5m2!1sen!2sug"  
+                style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+    </div>
+
+
+    
+
+
+
+    <!--new floating arrow-->
+    <div class="boxen" id="arrowUp">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+
+
+    <script>
+
+        (function sendMessage(){
+            emailjs.init("usDl4MufAkVt4fEqC"); //account public key
+        })();
+        
+        
+        var serviceID = "service_agmrt36"; //email service ID
+        var templateID = "template_syo5g6e"; //email template ID
+        
+        var params = {
+                sendername: document.querySelector("#name").value,
+                senderemail: document.querySelector("#email").value,
+                subject: document.querySelector("#subject").value,
+                message: document.querySelector("#message").value
+        };
+        
+        emailjs.send(serviceID, templateID, params)
+        .then(res => {
+            alert('Thank you, ' + params['sendername'] + '! Your message has been sent.');
+        })
+
+        .catch(error => {
+            console.error('There was an error sending the email:', error);
+                alert('There was an error sending the email. Please try again later.');
+        });
+        
+        
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script src="contactscript.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,1219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MY FAMILY CLAN TREE</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="familytree.css">
+</head>
+<body>
+    
+    <!--<header>
+        <h2 class="logo">logo</h2>
+        <nav class="navigation">
+            <li><a href="home.html" class="nav-item nav-link">Home</a></li>
+            <li><a href="about.html" class="nav-item nav-link active">About</a></li>
+            <li><a href="family tree.html" class="nav-item nav-link">Family Tree</a></li>
+            <li><a href="images.html" class="nav-item nav-link">Images</a></li>   
+            <li><a href="contact.html" class="nav-item nav-link">Contact</a></li>
+        </nav>
+    </header>-->
+
+
+    <header>
+        <div class="logo">
+            <h2>logo</h2>
+        </div>
+
+        <input type="checkbox" id="check">
+        <label for="check" class="icons">
+            <i class='bx bx-menu' id="menu-icon"></i>
+            <i class='bx bx-x' id="close-icon"></i>
+        </label>
+
+
+
+
+        <nav class="navigation">
+            <ul>
+                <li><a href="home.html" style="--i:0;" class="nav-item nav-link">Home</a></li>
+                <li><a href="about.html" style="--i:1;" class="nav-item nav-link active">About</a></li>
+                <li><a href="family tree.html" style="--i:2;" class="nav-item nav-link">Family Tree</a></li>
+                <li><a href="images.html" style="--i:3;" class="nav-item nav-link">Gallery</a></li>
+                <li><a href="contact.html" style="--i:4;" class="nav-item nav-link">Contact</a></li>
+                <!--li><a href="login.html" class="btnLogin-popup">Login</a></li-->
+
+                <!-- Input field with suggestions dropdown -->
+                <!--<input type="text" style="--i:5" id="searchInput" placeholder="Search by name..." list="nameOptions">
+                <datalist id="nameOptions"></datalist>-->
+                
+                <input type="text" id="searchInput" placeholder="Search by name..." list="nameOptions" autocomplete="off">
+                <datalist id="nameOptions"></datalist> 
+
+                
+            </ul>
+            
+        </nav>
+    </header>
+
+
+
+
+
+
+    <div class="body genealogy-body genealogy-scroll"> 
+        <div class="genealogy-tree">
+            <ul>
+                <li> <!--HEAD OF THE TREE TO BE KNOWN WITH CHILDREN (BAKALIKWIRA AND BALAZEEWA)-->
+                    <a href="javascript:void(0);">
+                        <div class="member-view-box">
+                            <div class="member-image">
+                                <img src="FAMILY TREE IMAGES\man.jpeg" alt="Member">
+                                <div class="member-details">
+                                    <h3>KANAGOODHAWA</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <ul class="active"> <!--BAKALIKWIRA-->
+                        <li>
+                            <a href="javascript:void(0);">
+                                <div class="member-view-box">
+                                    <div class="member-image">
+                                        <img src="FAMILY TREE IMAGES\man.jpeg" alt="Member">
+                                        <div class="member-details">
+                                            <h3>BAKALIKWIRA</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+                            <ul ><!--WIVES OF BAKALIKWIRA (NABIRYE AND KWEKOBYA)-->
+                                <li>
+                                    <a href="javascript:void(0);">
+                                        <div class="member-view-box">
+                                            <div class="member-image">
+                                                <img src="FAMILY TREE IMAGES\woman.jpeg" alt="Member">
+                                                <div class="member-details">
+                                                    <h3>NABIRYE</h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+                                    
+                                    <ul > <!--CHILDREN OF NABIRYE (MPAATA, KAUDHA, KUFABULALA, BABIRYE, KALINGIRILA)-->
+                                        
+                                        <li>
+                                            <a href="javascript:void(0);">
+                                                <div class="member-view-box">
+                                                    <div class="member-image">
+                                                        <img src="FAMILY TREE IMAGES\man.jpeg" alt="Member">
+                                                        <div class="member-details">
+                                                            <h3>MPAATA</h3>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
+
+                                            <ul> <!--wives of Mpaata(MILIA NALONGO and wife 2)-->
+                                                <li>
+                                                    <a href="javascript:void(0);">
+                                                        <div class="member-view-box">
+                                                            <div class="member-image">
+                                                                <img src="FAMILY TREE IMAGES\woman.jpeg" alt="Member">
+                                                                <div class="member-details">
+                                                                    <h3>MILIA NALONGO</h3>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+                                                    <ul><!--children of milia(sinani waiswa)-->
+                                                        <li>
+                                                            <a href="javascript:void(0);">
+                                                                <div class="member-view-box">
+                                                                    <div class="member-image">
+                                                                        <img src="FAMILY TREE IMAGES\man.jpeg" alt="Member">
+                                                                        <div class="member-details">
+                                                                            <h3>SINANI WAISWA</h3>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </a>
+
+                                                            <li>
+                                                                <a href="javascript:void(0);">
+                                                                    <div class="member-view-box">
+                                                                        <div class="member-image">
+                                                                            <img src="FAMILY TREE IMAGES\man.jpeg" alt="Member">
+                                                                            <div class="member-details">
+                                                                                <h3>2</h3>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </a>
+                                                            </li>
+
+                                                            <li>
+                                                                <a href="javascript:void(0);">
+                                                                    <div class="member-view-box">
+                                                                        <div class="member-image">
+                                                                            <img src="FAMILY TREE IMAGES\man.jpeg" alt="Member">
+                                                                            <div class="member-details">
+                                                                                <h3>3</h3>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </a>
+                                                            </li>
+
+                                                            <li>
+                                                                <a href="javascript:void(0);">
+                                                                    <div class="member-view-box">
+                                                                        <div class="member-image">
+                                                                            <img src="FAMILY TREE IMAGES\woman.jpeg" alt="Member">
+                                                                            <div class="member-details">
+                                                                                <h3>4</h3>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </a>
+                                                            </li>
+
+                                                            <li>
+                                                                <a href="javascript:void(0);">
+                                                                    <div class="member-view-box">
+                                                                        <div class="member-image">
+                                                                            <img src="FAMILY TREE IMAGES\woman.jpeg" alt="Member">
+                                                                            <div class="member-details">
+                                                                                <h3>5</h3>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </a>
+                                                            </li>
+                                                        </li>  
+                                                    </ul>
+                                                </li>
+
+                                                <li><!--WIFE 2 OF MPAATA--->
+                                                    <a href="javascript:void(0);">
+                                                        <div class="member-view-box">
+                                                            <div class="member-image">
+                                                                <img src="FAMILY TREE IMAGES\woman.jpeg" alt="Member">
+                                                                <div class="member-details">
+                                                                    <h3>WIFE 2</h3>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+
+                                                    <ul><!--children of wife 2 -->
+                                                        <li>
+                                                            <a href="javascript:void(0);">
+                                                                <div class="member-view-box">
+                                                                    <div class="member-image">
+                                                                        <img src="FAMILY TREE IMAGES\man.jpeg" alt="Member">
+                                                                        <div class="member-details">
+                                                                            <h3>ISIA SALIM</h3>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </a>
+                                                        </li>
+
+                                                        <li>
+                                                            <a href="javascript:void(0);">
+                                                                <div class="member-view-box">
+                                                                    <div class="member-image">
+                                                                        <img src="FAMILY TREE IMAGES\woman.jpeg" alt="Member">
+                                                                        <div class="member-details">
+                                                                            <h3>GRACE</h3>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </a>
+                                                        </li>
+
+                                                        <li>
+                                                            <a href="javascript:void(0);">
+                                                                <div class="member-view-box">
+                                                                    <div class="member-image">
+                                                                        <img src="FAMILY TREE IMAGES\woman.jpeg" alt="Member">
+                                                                        <div class="member-details">
+                                                                            <h3>MBWALI. N</h3>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+
+                                        <li><!--KAUDA CHILD OF NABIRYE -->
+                                            <a href="javascript:void(0);">
+                                                <div class="member-view-box">
+                                                    <div class="member-image">
+                                                        <img src="FAMILY TREE IMAGES\woman.jpeg" alt="Member">
+                                                        <div class="member-details">
+                                                            <h3>KAUDHA</h3>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+
+                                        <li><!--KUFABULALA CHILD OF NABIRYE -->
+                                            <a href="javascript:void(0);">
+                                                <div class="member-view-box">
+                                                    <div class="member-image">
+                                                        <img src="FAMILY TREE IMAGES\man.jpeg" alt="Member">
+                                                        <div class="member-details">
+                                                            <h3>KUFABULALA</h3>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+
+                                        <li><!--BABIRYE CHILD OF NABIRYE -->
+                                            <a href="javascript:void(0);">
+                                                <div class="member-view-box">
+                                                    <div class="member-image">
+                                                        <img src="FAMILY TREE IMAGES\woman.jpeg" alt="Member">
+                                                        <div class="member-details">
+                                                            <h3>BABIRYE</h3>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+
+                                        <li><!--KALINGIRIRA CHILD OF NABIRYE -->
+                                            <a href="javascript:void(0);">
+                                                <div class="member-view-box">
+                                                    <div class="member-image">
+                                                        <img src="FAMILY TREE IMAGES\man.jpeg" alt="Member">
+                                                        <div class="member-details">
+                                                            <h3>KALINGIRIRA</h3>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+
+                                <li> <!--SECOND WIFE KWEKOBYA-->
+                                    <a href="javascript:void(0);">
+                                        <div class="member-view-box">
+                                            <div class="member-image">
+                                                <img src="FAMILY TREE IMAGES\woman.jpeg" alt="Member">
+                                                <div class="member-details">
+                                                    <h3>KWEKOBYA</h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+
+                                    <ul > <!--KWEKOBYA CHILDREN (WAKABI SALIM, MAGALA )-->
+                                        <li>
+                                            <a href="javascript:void(0);">
+                                                <div class="member-view-box">
+                                                    <div class="member-image">
+                                                        <img src="FAMILY TREE IMAGES\man.jpeg" alt="Member">
+                                                        <div class="member-details">
+                                                            <h3>WAKABI SALIM</h3>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
+
+                                            <ul > <!--WAKABI'S WIVES (KIWALA, GABAGAYA, KALIDHA)-->
+                                                <li>
+                                                    <a href="javascript:void(0);">
+                                                        <div class="member-view-box">
+                                                            <div class="member-image">
+                                                                <img src="FAMILY TREE IMAGES/ISABIRYE BADRU/dada_female.jpg" alt="Member">
+                                                                <div class="member-details">
+                                                                    <h3>KIWALA. A</h3>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+
+                                                    <ul > <!--KIWALA CHILDREN (ISABIRYE BADRU, KWEKOBYA MARIAM)-->
+                                                        <li>
+                                                            <a href="javascript:void(0);">
+                                                                <div class="member-view-box">
+                                                                    <div class="member-image">
+                                                                        <img src="FAMILY TREE IMAGES/ISABIRYE BADRU/ISABIRYE BADRU.JPG" alt="Member">
+                                                                        <div class="member-details">
+                                                                            <h3>BADRU.I</h3>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </a>
+
+                                                            <ul > <!--BADRU'S WIVES (kataike,HARRIET, AGNES, BETTY AND KABALISA ROSE)-->
+
+                                                                <li>
+                                                                    <a href="javascript:void(0);">
+                                                                        <div class="member-view-box">
+                                                                            <div class="member-image">
+                                                                                <img src="FAMILY TREE IMAGES\woman.jpeg" alt="Member">
+                                                                                <div class="member-details">
+                                                                                    <h3>KATAIKE</h3>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </a>
+                                                                    
+                                                                    <ul><!--children of kataike (wakabi salim)-->
+                                                                        <li>
+                                                                            <a href="javascript:void(0);">
+                                                                                <div class="member-view-box">
+                                                                                    <div class="member-image">
+                                                                                        <img src="FAMILY TREE IMAGES/WAKABI SALIM/SALIM.jpg" alt="Member">
+                                                                                        <div class="member-details">
+                                                                                            <h3>WAKABI SALIM</h3>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </a>
+                                                                            <ul><!--wife of salim, namata sharifah-->
+                                                                                <li>
+                                                                                    <a href="javascript:void(0);">
+                                                                                        <div class="member-view-box">
+                                                                                            <div class="member-image">
+                                                                                                <img src="FAMILY TREE IMAGES/WAKABI SALIM/SHARIFAH.jpg" alt="Member">
+                                                                                                <div class="member-details">
+                                                                                                    <h3>NAMATA. S</h3>
+                                                                                                </div>
+                                                                                            </div>
+                                                                                        </div>
+                                                                                    </a>
+                                                                                    <ul><!--children of salim-->
+                                                                                        <li>
+                                                                                            <a href="javascript:void(0);">
+                                                                                                <div class="member-view-box">
+                                                                                                    <div class="member-image">
+                                                                                                        <img src="FAMILY TREE IMAGES\woman.jpeg" alt="Member">
+                                                                                                        <div class="member-details">
+                                                                                                            <h3>KATAIKE. S</h3>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </a>
+                                                                                        </li>
+
+                                                                                        <li>
+                                                                                            <a href="javascript:void(0);">
+                                                                                                <div class="member-view-box">
+                                                                                                    <div class="member-image">
+                                                                                                        <img src="FAMILY TREE IMAGES\man.jpeg" alt="Member">
+                                                                                                        <div class="member-details">
+                                                                                                            <h3>ISABIRYE. S</h3>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </a>
+                                                                                        </li>
+
+                                                                                        <li>
+                                                                                            <a href="javascript:void(0);">
+                                                                                                <div class="member-view-box">
+                                                                                                    <div class="member-image">
+                                                                                                        <img src="FAMILY TREE IMAGES/WAKABI SALIM/BIT.jpg" alt="Member">
+                                                                                                        <div class="member-details">
+                                                                                                            <h3>BIT JUMA</h3>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </a>
+                                                                                        </li>
+
+                                                                                        <li>
+                                                                                            <a href="javascript:void(0);">
+                                                                                                <div class="member-view-box">
+                                                                                                    <div class="member-image">
+                                                                                                        <img src="FAMILY TREE IMAGES/WAKABI SALIM/SHAKR.jpg" alt="Member">
+                                                                                                        <div class="member-details">
+                                                                                                            <h3>SHAKR</h3>
+                                                                                                        </div>
+                                                                                                    </div>
+                                                                                                </div>
+                                                                                            </a>
+                                                                                        </li>
+                                                                                    </ul>
+                                                                                </li>
+                                                                            </ul>
+                                                                        </li>
+
+                                                                    </ul>
+                                                                </li>
+
+
+                                                                <li><!--WIFE OF ISABIRYE BADRU-->
+                                                                    <a href="javascript:void(0);">
+                                                                        <div class="member-view-box">
+                                                                            <div class="member-image">
+                                                                                <img src="FAMILY TREE IMAGES\ISABIRYE BADRU\HARRIET2.jpg" alt="Member">
+                                                                                <div class="member-details">
+                                                                                    <h3>WAAKO. H</h3>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </a>
+                                                                    
+                                                                    <ul >  <!--HARRIET'S CHILDREN (RAJAB, JUNIOUR, SOPHIA)--> 
+                                                                        <li>
+                                                                            <a href="javascript:void(0);">
+                                                                                <div class="member-view-box">
+                                                                                    <div class="member-image">
+                                                                                        <img src="FAMILY TREE IMAGES\ISABIRYE BADRU\JUNIOR.jpg" alt="Member">
+                                                                                        <div class="member-details">
+                                                                                            <h3>JUNIOR.I.B</h3>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </a>
+                                                                        </li>
+                                
+                                                                        <li>
+                                                                            <a href="javascript:void(0);">
+                                                                                <div class="member-view-box">
+                                                                                    <div class="member-image">
+                                                                                        <img src="FAMILY TREE IMAGES\ISABIRYE BADRU\RAJAB.jpg" alt="Member">
+                                                                                        <div class="member-details">
+                                                                                            <h3>BAISI.R.I</h3>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </a>
+                                                                        </li>
+                                
+                                                                        <li>
+                                                                            <a href="javascript:void(0);">
+                                                                                <div class="member-view-box">
+                                                                                    <div class="member-image">
+                                                                                        <img src="FAMILY TREE IMAGES\ISABIRYE BADRU\SOPHIA.jpg" alt="Member">
+                                                                                        <div class="member-details">
+                                                                                            <h3>K. SOPHIA</h3>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </a>
+                                                                        </li>
+                                                                    </ul>
+                                                                </li>
+                        
+                                                                <li> <!--AGNES'S CHILDREN (KIBUMBA, AYATUSABILA, HAKIM)--> 
+                                                                    <a href="javascript:void(0);">
+                                                                        <div class="member-view-box">
+                                                                            <div class="member-image">
+                                                                                <img src="FAMILY TREE IMAGES\woman.jpeg" alt="Member">
+                                                                                <div class="member-details">
+                                                                                    <h3>AGNES</h3>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </a>
+
+                                                                    <ul > 
+                                                                        <li>
+                                                                            <a href="javascript:void(0);">
+                                                                                <div class="member-view-box">
+                                                                                    <div class="member-image">
+                                                                                        <img src="FAMILY TREE IMAGES\ISABIRYE BADRU\YASSER.jpg" alt="Member">
+                                                                                        <div class="member-details">
+                                                                                            <h3>KIBUMBA. Y</h3>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </a>
+                                                                        </li>
+                                
+                                                                        <li>
+                                                                            <a href="javascript:void(0);">
+                                                                                <div class="member-view-box">
+                                                                                    <div class="member-image">
+                                                                                        <img src="FAMILY TREE IMAGES\woman.jpeg" alt="Member">
+                                                                                        <div class="member-details">
+                                                                                            <h3>AYATUSABILA. K</h3>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </a>
+                                                                        </li>
+                                
+                                                                        <li>
+                                                                            <a href="javascript:void(0);">
+                                                                                <div class="member-view-box">
+                                                                                    <div class="member-image">
+                                                                                        <img src="FAMILY TREE IMAGES\man.jpeg" alt="Member">
+                                                                                        <div class="member-details">
+                                                                                            <h3>HAKIM(P)</h3>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </a>
+                                                                        </li>  
+                                                                    </ul>
+                                                                </li>
+                        
+                                                                <li> <!--BETTY'S CHILDREN (DZO AND RARA, ISAAC)--> 
+                                                                    <a href="javascript:void(0);">
+                                                                        <div class="member-view-box">
+                                                                            <div class="member-image">
+                                                                                <img src="FAMILY TREE IMAGES\ISABIRYE BADRU\BETTY2.jpg" alt="Member">
+                                                                                <div class="member-details">
+                                                                                    <h3>INGABIRE. B</h3>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </a>
+
+                                                                    <ul > 
+                                                                        <li>
+                                                                            <a href="javascript:void(0);">
+                                                                                <div class="member-view-box">
+                                                                                    <div class="member-image">
+                                                                                        <img src="FAMILY TREE IMAGES\ISABIRYE BADRU\DIZO.jpg" alt="Member">
+                                                                                        <div class="member-details">
+                                                                                            <h3>MALE DZO.R.I</h3>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </a>
+                                                                        </li>
+                                
+                                                                        <li>
+                                                                            <a href="javascript:void(0);">
+                                                                                <div class="member-view-box">
+                                                                                    <div class="member-image">
+                                                                                        <img src="FAMILY TREE IMAGES\ISABIRYE BADRU\RARA.jpg" alt="Member">
+                                                                                        <div class="member-details">
+                                                                                            <h3>KALEMBE RARA. R.I</h3>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </a>
+                                                                        </li>
+                                                                    </ul>
+                                                                </li>
+
+                                                                             
+                                                                <li><!--kabalisa rose  sister's wife of isabirye badru-->
+                                                                    <a href="javascript:void(0);">
+                                                                           <div class="member-view-box">
+                                                                            <div class="member-image">
+                                                                                <img src="FAMILY TREE IMAGES\woman.jpeg" alt="Member">
+                                                                                <div class="member-details">
+                                                                                    <h3>KABALISA ROSE</h3>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </a>
+
+                                                                    <ul><!--children of kabalisa rose -->
+                                                                        <li>
+                                                                            <a href="javascript:void(0);">
+                                                                                <div class="member-view-box">
+                                                                                    <div class="member-image">
+                                                                                        <img src="FAMILY TREE IMAGES\ISABIRYE BADRU\brenda.jpg" alt="Member">
+                                                                                        <div class="member-details">
+                                                                                            <h3>BRENDA</h3>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </a>
+                                                                        </li>
+
+                                                                        <li>
+                                                                            <a href="javascript:void(0);">
+                                                                                <div class="member-view-box">
+                                                                                    <div class="member-image">
+                                                                                        <img src="FAMILY TREE IMAGES\ISABIRYE BADRU\ISAAC2.jpg" alt="Member">
+                                                                                        <div class="member-details">
+                                                                                            <h3>MUTEBI ISAAC(P)</h3>
+                                                                                        </div>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </a>
+                                                                        </li>
+                                                                    </ul>
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                
+                                                        <li> <!-- KWEKOBYA MARIAM--> 
+                                                            <a href="javascript:void(0);">
+                                                                <div class="member-view-box">
+                                                                    <div class="member-image">
+                                                                        <img src="FAMILY TREE IMAGES/ISABIRYE BADRU/MARIAM.JPG" alt="Member">
+                                                                        <div class="member-details">
+                                                                            <h3>KWEKOBYA MARIAM</h3>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </a>
+
+                                                            <UL> <!-- KWEKOBYA MARIAM'S CHILDREN (........)-->
+                                                                <li>
+                                                                    <a href="javascript:void(0);">
+                                                                        <div class="member-view-box">
+                                                                            <div class="member-image">
+                                                                                <img src="FAMILY TREE IMAGES\man.jpeg" alt="Member">
+                                                                                <div class="member-details">
+                                                                                    <h3>D</h3>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </a>
+                                                                </li>
+
+                                                                <li>
+                                                                    <a href="javascript:void(0);">
+                                                                        <div class="member-view-box">
+                                                                            <div class="member-image">
+                                                                                <img src="FAMILY TREE IMAGES\man.jpeg" alt="Member">
+                                                                                <div class="member-details">
+                                                                                    <h3>D</h3>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </a>
+                                                                </li>
+
+                                                                <li>
+                                                                    <a href="javascript:void(0);">
+                                                                        <div class="member-view-box">
+                                                                            <div class="member-image">
+                                                                                <img src="FAMILY TREE IMAGES\man.jpeg" alt="Member">
+                                                                                <div class="member-details">
+                                                                                    <h3>D</h3>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </a>
+                                                                </li>
+                                                            </UL>
+                                                        </li>
+                                                    </ul> 
+                                                </li> 
+
+                                                <li> <!--WAKABI SALIM'S WIFE GABAGAYA-->
+                                                    <a href="javascript:void(0);">
+                                                        <div class="member-view-box">
+                                                            <div class="member-image">
+                                                                <img src="FAMILY TREE IMAGES\woman.jpeg" alt="Member">
+                                                                <div class="member-details">
+                                                                    <h3>GABAGAYA</h3>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+
+                                                    <ul><!--child of gabagaya-->
+                                                        <li>
+                                                            <a href="javascript:void(0);">
+                                                                <div class="member-view-box">
+                                                                    <div class="member-image">
+                                                                        <img src="FAMILY TREE IMAGES\man.jpeg" alt="Member">
+                                                                        <div class="member-details">
+                                                                            <h3>KUFABULALA. M</h3>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+        
+                                                <li> <!--WAKABI SALIM'S WIFE KALIDHA-->
+                                                    <a href="javascript:void(0);">
+                                                        <div class="member-view-box">
+                                                            <div class="member-image">
+                                                                <img src="FAMILY TREE IMAGES\woman.jpeg" alt="Member">
+                                                                <div class="member-details">
+                                                                    <h3>KALIDHA</h3>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+
+                                                    <ul><!--child of kalidha-->
+                                                        <li>
+                                                            <a href="javascript:void(0);">
+                                                                <div class="member-view-box">
+                                                                    <div class="member-image">
+                                                                        <img src="FAMILY TREE IMAGES/ISABIRYE BADRU/namutebi.jpg" alt="Member">
+                                                                        <div class="member-details">
+                                                                            <h3>NAMUTEBI. S</h3>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </li> 
+
+                                                <li> <ul><!--kolositika another wife of wakabi salim --></ul>
+                                                    <a href="javascript:void(0);">
+                                                        <div class="member-view-box">
+                                                            <div class="member-image">
+                                                                <img src="FAMILY TREE IMAGES\woman.jpeg" alt="Member">
+                                                                <div class="member-details">
+                                                                    <h3>KOLOSITIKA</h3>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </a>
+
+                                                    <ul><!--child of kolositika wakabi zaidi-->
+                                                        <li>
+                                                            <a href="javascript:void(0);">
+                                                                <div class="member-view-box">
+                                                                    <div class="member-image">
+                                                                        <img src="FAMILY TREE IMAGES\man.jpeg" alt="Member">
+                                                                        <div class="member-details">
+                                                                            <h3>WAKABI ZAIDI</h3>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </li>
+                                        
+
+                                        <li> <!--KWEKOBYA'S CHILD MAGALA-->
+                                            <a href="javascript:void(0);">
+                                                <div class="member-view-box">
+                                                    <div class="member-image">
+                                                        <img src="FAMILY TREE IMAGES\man.jpeg" alt="Member">
+                                                        <div class="member-details">
+                                                            <h3>MAGALA</h3>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
+
+                                            <ul> <!--MAGALA'S WIVES (.......)-->
+                                                <li>
+                                                    <a href="javascript:void(0);">
+                                                        <div class="member-view-box">
+                                                            <div class="member-image">
+                                                                <img src="FAMILY TREE IMAGES\woman.jpeg" alt="Member">
+                                                                <div class="member-details">
+                                                                    <h3>WIFE</h3>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </a> 
+                                                    
+                                                    <ul> <!--WIFE'S CHILD KOTILIDA-->
+                                                        <li>
+                                                            <a href="javascript:void(0);">
+                                                                <div class="member-view-box">
+                                                                    <div class="member-image">
+                                                                        <img src="FAMILY TREE IMAGES\woman.jpeg" alt="Member">
+                                                                        <div class="member-details">
+                                                                            <h3>KOTILIDA</h3>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </a>   
+                                                        </li>
+                                                    </ul>
+                                                </li> 
+                                            </ul>
+                                        </li>                                        
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+
+
+
+
+                        <!-- second son of kangoodhawa who is balazeewa-->
+
+
+
+
+
+
+                        <li> <!--SECOND SON OF KANGOODHAWA BALAZEEWA-->
+                            <a href="javascript:void(0);">
+                                <div class="member-view-box">
+                                    <div class="member-image">
+                                        <img src="FAMILY TREE IMAGES\man.jpeg" alt="Member">
+                                        <div class="member-details">
+                                            <h3>BALAZEEWA</h3>
+                                        </div>
+                                    </div>
+                                </div>
+                            </a>
+
+                            <ul class="active"> <!--WIVES OF BALAZEEWA (WAMUDHUBA AND BYALI PLUS NABIRYE INHERITED FROM BAKALIKWIRA)-->
+                                <li>
+                                    <a href="javascript:void(0);">
+                                        <div class="member-view-box">
+                                            <div class="member-image">
+                                                <img src="FAMILY TREE IMAGES\woman.jpeg" alt="Member">
+                                                <div class="member-details">
+                                                    <h3>WAMUDHUBA</h3>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </a>
+
+                                    <UL> <!--CHILDREN OF WAMUDHUBA (KIBUMBA, WAIBUGA ESEI, KINTU, MATAMA)-->
+                                        <li>
+                                            <a href="javascript:void(0);">
+                                                <div class="member-view-box">
+                                                    <div class="member-image">
+                                                        <img src="FAMILY TREE IMAGES\man.jpeg" alt="Member">
+                                                        <div class="member-details">
+                                                            <h3>KIBUMBA</h3>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>  
+                                            
+                                            <UL> <!--WIVES OF KIBUMBA (NAIKOBA EFISEKANSI, MBWALI NGUGREE, AKIMAWA GERTRUDE)-->
+                                                <li>
+                                                    <a href="javascript:void(0);">
+                                                        <div class="member-view-box">
+                                                            <div class="member-image">
+                                                                <img src="FAMILY TREE IMAGES\woman.jpeg" alt="Member">
+                                                                <div class="member-details">
+                                                                    <h3>NAIKOBA</h3>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </a>  
+                                                    
+                                                    <UL>  <!--CHILD OF NAIKOBA (MAGEMESO)-->
+                                                        <li>
+                                                            <a href="javascript:void(0);">
+                                                                <div class="member-view-box">
+                                                                    <div class="member-image">
+                                                                        <img src="FAMILY TREE IMAGES\images\Images\magemeso son to kibumba, and naikoba.jpg" alt="Member">
+                                                                        <div class="member-details">
+                                                                            <h3>MAGEMESO</h3>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </a>   
+                                                        </li>
+                                                    </UL>
+                                                </li>
+
+                                                <li>
+                                                    <a href="javascript:void(0);">
+                                                        <div class="member-view-box">
+                                                            <div class="member-image">
+                                                                <img src="FAMILY TREE IMAGES\woman.jpeg" alt="Member">
+                                                                <div class="member-details">
+                                                                    <h3>MBWALI</h3>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </a>   
+
+                                                    <UL>  <!--CHILD OF MBWALI NGUGREE (ISABIRYE JAMES)-->
+                                                        <li>
+                                                            <a href="javascript:void(0);">
+                                                                <div class="member-view-box">
+                                                                    <div class="member-image">
+                                                                        <img src="FAMILY TREE IMAGES/ISABIRYE BADRU/isabirye.jpg" alt="Member">
+                                                                        <div class="member-details">
+                                                                            <h3>ISABIRYE</h3>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </a>  
+                                                            
+                                                            <ul> <!--wife of isabirye-->
+                                                                <li>
+                                                                    <a href="javascript:void(0);">
+                                                                        <div class="member-view-box">
+                                                                            <div class="member-image">
+                                                                                <img src="FAMILY TREE IMAGES/ISABIRYE BADRU/isabirye's wife.jpg" alt="Member">
+                                                                                <div class="member-details">
+                                                                                    <h3>NAKOMBE. C</h3>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </a>   
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+                                                    </UL>
+                                                </li>
+
+                                                <li>
+                                                    <a href="javascript:void(0);">
+                                                        <div class="member-view-box">
+                                                            <div class="member-image">
+                                                                <img src="FAMILY TREE IMAGES\woman.jpeg" alt="Member">
+                                                                <div class="member-details">
+                                                                    <h3>ALIMUWA</h3>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </a> 
+                                                    
+                                                    <UL>  <!--CHILDREN OF AKIMAWA GERTRUDE (KYAKEREKERA, SIZOMU DAVID, MAGANDA SIMON)-->
+                                                        <li>
+                                                            <a href="javascript:void(0);">
+                                                                <div class="member-view-box">
+                                                                    <div class="member-image">
+                                                                        <img src="FAMILY TREE IMAGES\man.jpeg" alt="Member">
+                                                                        <div class="member-details">
+                                                                            <h3>KYATEREKERA</h3>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </a>   
+                                                        </li>
+
+                                                        <li>
+                                                            <a href="javascript:void(0);">
+                                                                <div class="member-view-box">
+                                                                    <div class="member-image">
+                                                                        <img src="FAMILY TREE IMAGES/ISABIRYE BADRU/SIZOMU.JPG" alt="Member">
+                                                                        <div class="member-details">
+                                                                            <h3>SIZOMU</h3>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </a>   
+
+                                                            <ul><!--WIFE TO SIZOMU-->
+                                                                <li>
+                                                                     <a href="javascript:void(0);">
+                                                                        <div class="member-view-box">
+                                                                            <div class="member-image">
+                                                                                <img src="FAMILY TREE IMAGES\NAMUKOBE OLIVER.JPG" alt="Member">
+                                                                                <div class="member-details">
+                                                                                    <h3>NAMUKOBE. O</h3>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </a>   
+                                                                </li>
+                                                            </ul>
+                                                        </li>
+
+                                                        <li>
+                                                            <a href="javascript:void(0);">
+                                                                <div class="member-view-box">
+                                                                    <div class="member-image">
+                                                                        <img src="FAMILY TREE IMAGES/ISABIRYE BADRU/SIMON MAGANDA.JPG" alt="Member">
+                                                                        <div class="member-details">
+                                                                            <h3>MAGANDA. S</h3>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </a>  
+                                                            
+                                                               <ul><!--wife to maganda. s()-->
+                                                                    <li>
+                                                                        <a href="javascript:void(0);">
+                                                                            <div class="member-view-box">
+                                                                                <div class="member-image">
+                                                                                    <img src="FAMILY TREE IMAGES\HADIJA MUGABI.JPG" alt="Member">
+                                                                                    <div class="member-details">
+                                                                                        <h3>HADIJJA. M.S</h3>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </a>   
+                                                                    </li>
+                                                               </ul>
+                                                        </li>
+                                                    </UL>
+                                                </li>
+                                            </UL>
+                                        </li>
+
+                                        <li>
+                                            <a href="javascript:void(0);">
+                                                <div class="member-view-box">
+                                                    <div class="member-image">
+                                                        <img src="FAMILY TREE IMAGES\man.jpeg" alt="Member">
+                                                        <div class="member-details">
+                                                            <h3>WAIBUGA</h3>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>   
+                                        </li>
+
+                                        <li>
+                                            <a href="javascript:void(0);">
+                                                <div class="member-view-box">
+                                                    <div class="member-image">
+                                                        <img src="FAMILY TREE IMAGES\man.jpeg" alt="Member">
+                                                        <div class="member-details">
+                                                            <h3>KINTU</h3>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>   
+                                        </li>
+
+                                        <li>
+                                            <a href="javascript:void(0);">
+                                                <div class="member-view-box">
+                                                    <div class="member-image">
+                                                        <img src="FAMILY TREE IMAGES\man.jpeg" alt="Member">
+                                                        <div class="member-details">
+                                                            <h3>MATAMA</h3>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>   
+                                        </li>
+
+                                    </UL> <!--BYALI WIFE OF BALAZEEWA-->
+                                        <li>
+                                            <a href="javascript:void(0);">
+                                                <div class="member-view-box">
+                                                    <div class="member-image">
+                                                        <img src="FAMILY TREE IMAGES\woman.jpeg" alt="Member">
+                                                        <div class="member-details">
+                                                            <h3>BYALI</h3>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>  
+                                            
+                                            <UL> <!--BYALI'S CHILDREN (ISABIRYE SAFAATI, MUNAABI ENERIKO, MAGAYA JOHN, NABWONSO MARIAM)-->
+                                                <li>
+                                                    <a href="javascript:void(0);">
+                                                        <div class="member-view-box">
+                                                            <div class="member-image">
+                                                                <img src="FAMILY TREE IMAGES\man.jpeg" alt="Member">
+                                                                <div class="member-details">
+                                                                    <h3>SAFAATI</h3>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </a>   
+                                                </li>
+
+                                                <li>
+                                                    <a href="javascript:void(0);">
+                                                        <div class="member-view-box">
+                                                            <div class="member-image">
+                                                                <img src="FAMILY TREE IMAGES\woman.jpeg" alt="Member">
+                                                                <div class="member-details">
+                                                                    <h3>MUNAABI</h3>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </a>   
+
+                                                    <ul><!--children of munaabi(magret sajabi)-->
+                                                        <li>
+                                                            <a href="javascript:void(0);">
+                                                                <div class="member-view-box">
+                                                                    <div class="member-image">
+                                                                        <img src="FAMILY TREE IMAGES/ISABIRYE BADRU/MAGRET .S.JPG" alt="Member">
+                                                                        <div class="member-details">
+                                                                            <h3>MAGRET. S</h3>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </a>   
+                                                        </li>
+                                                    </ul>
+                                                </li>
+
+                                                <li>
+                                                    <a href="javascript:void(0);">
+                                                        <div class="member-view-box">
+                                                            <div class="member-image">
+                                                                <img src="FAMILY TREE IMAGES\man.jpeg" alt="Member">
+                                                                <div class="member-details">
+                                                                    <h3>MAGAYA</h3>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </a>   
+                                                </li>
+
+                                                <li>
+                                                    <a href="javascript:void(0);">
+                                                        <div class="member-view-box">
+                                                            <div class="member-image">
+                                                                <img src="FAMILY TREE IMAGES\woman.jpeg" alt="Member">
+                                                                <div class="member-details">
+                                                                    <h3>NABWONSO</h3>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </a>   
+                                                </li>
+                                            </UL>
+                                        </li>
+
+                                        <li> <!--WIFE NABIRYE INHERITED FROM BAKALIKWIRA-->
+                                            <a href="javascript:void(0);">
+                                                <div class="member-view-box">
+                                                    <div class="member-image">
+                                                        <img src="FAMILY TREE IMAGES\woman.jpeg" alt="Member">
+                                                        <div class="member-details">
+                                                            <h3>NABIRYE(H)</h3>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </a>
+
+                                            <ul> 
+                                                <li> <!--NABIRYE SON KASOWOLE FROM BALAZEEWA-->
+                                                    <a href="javascript:void(0);">
+                                                        <div class="member-view-box">
+                                                            <div class="member-image">
+                                                                <img src="FAMILY TREE IMAGES\man.jpeg" alt="Member">
+                                                                <div class="member-details">
+                                                                    <h3>KASOWOLE</h3>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </a>   
+                                                </li> 
+                                            </ul>
+                                        </li>
+                                    
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    
+
+    <!--new floating arrow-->
+    <div class="boxen" id="arrowUp">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+ 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="familytree.js"></script>
+</body>
+</html>

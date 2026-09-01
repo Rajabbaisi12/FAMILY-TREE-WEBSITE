@@ -1,0 +1,1549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MY FAMILY CLAN TREE</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="images.css">
+</head>
+<body>
+    
+    <!--<header>
+        <h2 class="logo">logo</h2>
+        <nav class="navigation">
+            <li><a href="home.html" class="nav-item nav-link">Home</a></li>
+            <li><a href="about.html" class="nav-item nav-link active">About</a></li>
+            <li><a href="family tree.html" class="nav-item nav-link">Family Tree</a></li>
+            <li><a href="images.html" class="nav-item nav-link">Images</a></li>   
+            <li><a href="contact.html" class="nav-item nav-link">Contact</a></li>
+        </nav>
+    </header>-->
+
+    <header>
+        <div class="logo">
+            <h2>logo</h2>
+        </div>
+
+        <input type="checkbox" id="check">
+        <label for="check" class="icons">
+            <i class='bx bx-menu' id="menu-icon"></i>
+            <i class='bx bx-x' id="close-icon"></i>
+        </label>
+
+
+
+        <nav class="navigation">
+            <ul>
+                <li><a href="home.html" style="--i:0;" class="nav-item nav-link">Home</a></li>
+                <li><a href="about.html" style="--i:1;" class="nav-item nav-link active">About</a></li>
+                <li><a href="family tree.html" style="--i:2;" class="nav-item nav-link">Family Tree</a></li>
+                <li><a href="images.html" style="--i:3;" class="nav-item nav-link">Gallery</a></li>
+                <li><a href="contact.html" style="--i:4;" class="nav-item nav-link">Contact</a></li>
+                
+                <ul id="suggestionsList"></ul>
+                <!-- Input field with suggestions dropdown -->
+                <input type="text" style="--i:5" id="searchInput" placeholder="Search by name..." list="nameOptions">
+                <datalist id="nameOptions"></datalist>
+
+            </ul>
+            
+        </nav>
+    </header>
+
+           
+
+
+   
+
+    <div class="gallery">
+
+        <div class="person">
+            <img src="FAMILY TREE IMAGES/ISABIRYE BADRU/ISABIRYE BADRU.JPG" alt="Person 1" class="responsive-image">
+            <h3>ISABIRYE BADRU</h3>
+            <p>Status: ALIVE</p>
+            <p>NIN: CM111111111111111</p>
+            <p>Phone: +256-772-450491</p>
+            <p>Email: wakabisalim@yahoo.com</p>
+        </div>
+
+        <div class="person">
+            <img src="FAMILY TREE IMAGES/man.jpeg" alt="Person 2" class="responsive-image">
+            <h3>KATAIKE</h3>
+            <p>Status: ALIVE</p>
+            <p>NIN: CM111111111111111</p>
+            <p>Phone: 987-654-3210</p>
+            <p>Email: jane@example.com</p>
+        </div>
+
+        <div class="person">
+            <img src="FAMILY TREE IMAGES/ISABIRYE BADRU/HARRIET.jpg" alt="Person 2" class="responsive-image">
+            <h3>WAAKO HARRIET</h3>
+            <p>Status: ALIVE</p>
+            <p>NIN: CM111111111111111</p>
+            <p>Phone: +256-752-604175</p>
+            <p>Email: jane@example.com</p>
+        </div>
+
+        <div class="person">
+            <img src="FAMILY TREE IMAGES/man.jpeg" alt="Person 2" class="responsive-image">
+            <h3>BUSINGYE AGNES</h3>
+            <p>Status: ALIVE</p>
+            <p>NIN: CM111111111111111</p>
+            <p>Phone: 987-654-3210</p>
+            <p>Email: jane@example.com</p>
+        </div>
+
+        <div class="person">
+            <img src="FAMILY TREE IMAGES/ISABIRYE BADRU/BETTY2.jpg" alt="Person 2" class="responsive-image">
+            <h3>INGABIRE BETTY</h3>
+            <p>Status: ALIVE</p>
+            <p>NIN: CM111111111111111</p>
+            <p>Phone: +256-772-450491</p>
+            <p>Email: jane@example.com</p>
+        </div>
+
+        <div class="person">
+            <img src="FAMILY TREE IMAGES/WAKABI SALIM/SALIM.jpg" alt="Person 2" class="responsive-image">
+            <h3>WAKABI SALIM</h3>
+            <p>Status: ALIVE</p>
+            <p>NIN: CM111111111111111</p>
+            <p>Phone: 987-654-3210</p>
+            <p>Email: jane@example.com</p>
+        </div>
+
+        <div class="person">
+            <img src="FAMILY TREE IMAGES/WAKABI SALIM/SHARIFAH.jpg" alt="Person 2" class="responsive-image">
+            <h3>NAMATA SHARIFAH</h3>
+            <p>Status: ALIVE</p>
+            <p>NIN: CM111111111111111</p>
+            <p>Phone: 987-654-3210</p>
+            <p>Email: jane@example.com</p>
+        </div>
+
+        <div class="person">
+            <img src="FAMILY TREE IMAGES/ISABIRYE BADRU/JUNIOR.jpg" alt="Person 2" class="responsive-image">
+            <h3>ISABIRYE BADRU. J</h3>
+            <p>Status: ALIVE</p>
+            <p>NIN: CM111111111111111</p>
+            <p>Phone: 987-654-3210</p>
+            <p>Email: jane@example.com</p>
+        </div>
+
+        <div class="person">
+            <img src="FAMILY TREE IMAGES/ISABIRYE BADRU/RAJAB.jpg" alt="Person 2" class="responsive-image">
+            <h3>BAISI RAJAB. I</h3>
+            <p>Status: ALIVE</p>
+            <p>NIN: CM111111111111111</p>
+            <p>Phone: 987-654-3210</p>
+            <p>Email: jane@example.com</p>
+        </div>
+
+        <div class="person">
+            <img src="FAMILY TREE IMAGES\ISABIRYE BADRU\brenda.jpg" alt="Person 2" class="responsive-image">
+            <h3>BRENDA</h3>
+            <p>Status: ALIVE</p>
+            <p>NIN: CM111111111111111</p>
+            <p>Phone: 987-654-3210</p>
+            <p>Email: jane@example.com</p>
+        </div>
+
+        <div class="person">
+            <img src="FAMILY TREE IMAGES/ISABIRYE BADRU/ISAAC2.jpg" alt="Person 2" class="responsive-image">
+            <h3>MUTEBI ISAAC</h3>
+            <p>Status: ALIVE</p>
+            <p>NIN: CM111111111111111</p>
+            <p>Phone: 987-654-3210</p>
+            <p>Email: jane@example.com</p>
+        </div>
+
+        <div class="person">
+            <img src="FAMILY TREE IMAGES/ISABIRYE BADRU/SOPHIA.jpg" alt="Person 2" class="responsive-image">
+            <h3>KIWALA SOPHIA</h3>
+            <p>Status: ALIVE</p>
+            <p>NIN: CM111111111111111</p>
+            <p>Phone: 987-654-3210</p>
+            <p>Email: jane@example.com</p>
+        </div>
+
+        <div class="person">
+            <img src="FAMILY TREE IMAGES/man.jpeg" alt="Person 2" class="responsive-image">
+            <h3>ISABIRYE SHAHAN</h3>
+            <p>Status: ALIVE</p>
+            <p>NIN: CM111111111111111</p>
+            <p>Phone: 987-654-3210</p>
+            <p>Email: jane@example.com</p>
+        </div>
+
+        <div class="person">
+            <img src="FAMILY TREE IMAGES/man.jpeg" alt="Person 2" class="responsive-image">
+            <h3>KATAIKE SHAIMA</h3>
+            <p>Status: ALIVE</p>
+            <p>NIN: CM111111111111111</p>
+            <p>Phone: 987-654-3210</p>
+            <p>Email: jane@example.com</p>
+        </div>
+
+        <div class="person">
+            <img src="FAMILY TREE IMAGES/WAKABI SALIM/BIT.jpg" alt="Person 2" class="responsive-image">
+            <h3>BIT JUMA</h3>
+            <p>Status: ALIVE</p>
+            <p>NIN: CM111111111111111</p>
+            <p>Phone: 987-654-3210</p>
+            <p>Email: jane@example.com</p>
+        </div>
+
+        <div class="person">
+            <img src="FAMILY TREE IMAGES/WAKABI SALIM/SHAKR.jpg" alt="Person 2" class="responsive-image">
+            <h3>SHAKR</h3>
+            <p>Status: ALIVE</p>
+            <p>NIN: CM111111111111111</p>
+            <p>Phone: 987-654-3210</p>
+            <p>Email: jane@example.com</p>
+        </div>
+
+        <div class="person">
+            <img src="FAMILY TREE IMAGES/ISABIRYE BADRU/YASSER.jpg" alt="Person 2" class="responsive-image">
+            <h3>KIBUMBA YASSER</h3>
+            <p>Status: ALIVE</p>
+            <p>NIN: CM111111111111111</p>
+            <p>Phone: 987-654-3210</p>
+            <p>Email: jane@example.com</p>
+        </div>
+
+        <div class="person">
+            <img src="FAMILY TREE IMAGES/man.jpeg" alt="Person 2" class="responsive-image">
+            <h3>AYATUSABILA KISHA</h3>
+            <p>Status: ALIVE</p>
+            <p>NIN: CM111111111111111</p>
+            <p>Phone: 987-654-3210</p>
+            <p>Email: jane@example.com</p>
+        </div>
+
+        <div class="person">
+            <img src="FAMILY TREE IMAGES/man.jpeg" alt="Person 2" class="responsive-image">
+            <h3>KALULE HAKIM</h3>
+            <p>Status: ALIVE</p>
+            <p>NIN: CM111111111111111</p>
+            <p>Phone: 987-654-3210</p>
+            <p>Email: jane@example.com</p>
+        </div>
+
+        <div class="person">
+            <img src="FAMILY TREE IMAGES/ISABIRYE BADRU/RARA.jpg" alt="Person 2" class="responsive-image">
+            <h3>KALEMBE R. R</h3>
+            <p>Status: ALIVE</p>
+            <p>NIN: CM111111111111111</p>
+            <p>Phone: 987-654-3210</p>
+            <p>Email: jane@example.com</p>
+        </div>
+
+        <div class="person">
+            <img src="FAMILY TREE IMAGES/ISABIRYE BADRU/DIZO.jpg" alt="Person 2" class="responsive-image">
+            <h3>MALE DZO</h3>
+            <p>Status: ALIVE</p>
+            <p>NIN: CM111111111111111</p>
+            <p>Phone: 987-654-3210</p>
+            <p>Email: jane@example.com</p>
+        </div>
+
+        <div class="person">
+            <img src="FAMILY TREE IMAGES/man.jpeg" alt="Person 2" class="responsive-image">
+            <h3>RAJAB</h3>
+            <p>Status: ALIVE</p>
+            <p>NIN: CM111111111111111</p>
+            <p>Phone: 987-654-3210</p>
+            <p>Email: jane@example.com</p>
+        </div>
+
+        <div class="person">
+            <img src="FAMILY TREE IMAGES/man.jpeg" alt="Person 2" class="responsive-image">
+            <h3>RAJAB</h3>
+            <p>Status: ALIVE</p>
+            <p>NIN: CM111111111111111</p>
+            <p>Phone: 987-654-3210</p>
+            <p>Email: jane@example.com</p>
+        </div>
+
+        <div class="person">
+            <img src="FAMILY TREE IMAGES/man.jpeg" alt="Person 2" class="responsive-image">
+            <h3>RAJAB</h3>
+            <p>Status: ALIVE</p>
+            <p>NIN: CM111111111111111</p>
+            <p>Phone: 987-654-3210</p>
+            <p>Email: jane@example.com</p>
+        </div>
+
+        <div class="person">
+            <img src="FAMILY TREE IMAGES/man.jpeg" alt="Person 2" class="responsive-image">
+            <h3>RAJAB</h3>
+            <p>Status: ALIVE</p>
+            <p>NIN: CM111111111111111</p>
+            <p>Phone: 987-654-3210</p>
+            <p>Email: jane@example.com</p>
+        </div>
+
+        <div class="person">
+            <img src="FAMILY TREE IMAGES/man.jpeg" alt="Person 2" class="responsive-image">
+            <h3>RAJAB</h3>
+            <p>Status: ALIVE</p>
+            <p>NIN: CM111111111111111</p>
+            <p>Phone: 987-654-3210</p>
+            <p>Email: jane@example.com</p>
+        </div>
+
+        <div class="person">
+            <img src="FAMILY TREE IMAGES/man.jpeg" alt="Person 2" class="responsive-image">
+            <h3>RAJAB</h3>
+            <p>Status: ALIVE</p>
+            <p>NIN: CM111111111111111</p>
+            <p>Phone: 987-654-3210</p>
+            <p>Email: jane@example.com</p>
+        </div>
+
+        <div class="person">
+            <img src="FAMILY TREE IMAGES/man.jpeg" alt="Person 2" class="responsive-image">
+            <h3>RAJAB</h3>
+            <p>Status: ALIVE</p>
+            <p>NIN: CM111111111111111</p>
+            <p>Phone: 987-654-3210</p>
+            <p>Email: jane@example.com</p>
+        </div>
+
+        <div class="person">
+            <img src="FAMILY TREE IMAGES/man.jpeg" alt="Person 2" class="responsive-image">
+            <h3>RAJAB</h3>
+            <p>Status: ALIVE</p>
+            <p>NIN: CM111111111111111</p>
+            <p>Phone: 987-654-3210</p>
+            <p>Email: jane@example.com</p>
+        </div>
+
+        <div class="person">
+            <img src="FAMILY TREE IMAGES/man.jpeg" alt="Person 2" class="responsive-image">
+            <h3>RAJAB</h3>
+            <p>Status: ALIVE</p>
+            <p>NIN: CM111111111111111</p>
+            <p>Phone: 987-654-3210</p>
+            <p>Email: jane@example.com</p>
+        </div>
+
+        <div class="person">
+            <img src="FAMILY TREE IMAGES/man.jpeg" alt="Person 2" class="responsive-image">
+            <h3>RAJAB</h3>
+            <p>Status: ALIVE</p>
+            <p>NIN: CM111111111111111</p>
+            <p>Phone: 987-654-3210</p>
+            <p>Email: jane@example.com</p>
+        </div>
+
+        <div class="person">
+            <img src="FAMILY TREE IMAGES/man.jpeg" alt="Person 2" class="responsive-image">
+            <h3>RAJAB</h3>
+            <p>Status: ALIVE</p>
+            <p>NIN: CM111111111111111</p>
+            <p>Phone: 987-654-3210</p>
+            <p>Email: jane@example.com</p>
+        </div>
+
+        <div class="person">
+            <img src="FAMILY TREE IMAGES/man.jpeg" alt="Person 2" class="responsive-image">
+            <h3>RAJAB</h3>
+            <p>Status: ALIVE</p>
+            <p>NIN: CM111111111111111</p>
+            <p>Phone: 987-654-3210</p>
+            <p>Email: jane@example.com</p>
+        </div>
+
+        <div class="person">
+            <img src="FAMILY TREE IMAGES/man.jpeg" alt="Person 2" class="responsive-image">
+            <h3>RAJAB</h3>
+            <p>Status: ALIVE</p>
+            <p>NIN: CM111111111111111</p>
+            <p>Phone: 987-654-3210</p>
+            <p>Email: jane@example.com</p>
+        </div>
+
+        <div class="person">
+            <img src="FAMILY TREE IMAGES/man.jpeg" alt="Person 2" class="responsive-image">
+            <h3>RAJAB</h3>
+            <p>Status: ALIVE</p>
+            <p>NIN: CM111111111111111</p>
+            <p>Phone: 987-654-3210</p>
+            <p>Email: jane@example.com</p>
+        </div>
+
+        <div class="person">
+            <img src="FAMILY TREE IMAGES/man.jpeg" alt="Person 2" class="responsive-image">
+            <h3>RAJAB</h3>
+            <p>Status: ALIVE</p>
+            <p>NIN: CM111111111111111</p>
+            <p>Phone: 987-654-3210</p>
+            <p>Email: jane@example.com</p>
+        </div>
+
+        <div class="person">
+            <img src="FAMILY TREE IMAGES/man.jpeg" alt="Person 2" class="responsive-image">
+            <h3>RAJAB</h3>
+            <p>Status: ALIVE</p>
+            <p>NIN: CM111111111111111</p>
+            <p>Phone: 987-654-3210</p>
+            <p>Email: jane@example.com</p>
+        </div>
+
+        <div class="person">
+            <img src="FAMILY TREE IMAGES/man.jpeg" alt="Person 2" class="responsive-image">
+            <h3>RAJAB</h3>
+            <p>Status: ALIVE</p>
+            <p>NIN: CM111111111111111</p>
+            <p>Phone: 987-654-3210</p>
+            <p>Email: jane@example.com</p>
+        </div>
+
+        <div class="person">
+            <img src="FAMILY TREE IMAGES/man.jpeg" alt="Person 2" class="responsive-image">
+            <h3>RAJAB</h3>
+            <p>Status: ALIVE</p>
+            <p>NIN: CM111111111111111</p>
+            <p>Phone: 987-654-3210</p>
+            <p>Email: jane@example.com</p>
+        </div>
+
+        <div class="person">
+            <img src="FAMILY TREE IMAGES/man.jpeg" alt="Person 2" class="responsive-image">
+            <h3>RAJAB</h3>
+            <p>Status: ALIVE</p>
+            <p>NIN: CM111111111111111</p>
+            <p>Phone: 987-654-3210</p>
+            <p>Email: jane@example.com</p>
+        </div>
+
+        <div class="person">
+            <img src="FAMILY TREE IMAGES/man.jpeg" alt="Person 2" class="responsive-image">
+            <h3>RAJAB</h3>
+            <p>Status: ALIVE</p>
+            <p>NIN: CM111111111111111</p>
+            <p>Phone: 987-654-3210</p>
+            <p>Email: jane@example.com</p>
+        </div>
+
+        <div class="person">
+            <img src="FAMILY TREE IMAGES/man.jpeg" alt="Person 2" class="responsive-image">
+            <h3>RAJAB</h3>
+            <p>Status: ALIVE</p>
+            <p>NIN: CM111111111111111</p>
+            <p>Phone: 987-654-3210</p>
+            <p>Email: jane@example.com</p>
+        </div>
+
+        <div class="person">
+            <img src="FAMILY TREE IMAGES/man.jpeg" alt="Person 2" class="responsive-image">
+            <h3>RAJAB</h3>
+            <p>Status: ALIVE</p>
+            <p>NIN: CM111111111111111</p>
+            <p>Phone: 987-654-3210</p>
+            <p>Email: jane@example.com</p>
+        </div>
+
+        <div class="person">
+            <img src="FAMILY TREE IMAGES/man.jpeg" alt="Person 2" class="responsive-image">
+            <h3>RAJAB</h3>
+            <p>Status: ALIVE</p>
+            <p>NIN: CM111111111111111</p>
+            <p>Phone: 987-654-3210</p>
+            <p>Email: jane@example.com</p>
+        </div>
+
+        <div class="person">
+            <img src="FAMILY TREE IMAGES/man.jpeg" alt="Person 2" class="responsive-image">
+            <h3>RAJAB</h3>
+            <p>Status: ALIVE</p>
+            <p>NIN: CM111111111111111</p>
+            <p>Phone: 987-654-3210</p>
+            <p>Email: jane@example.com</p>
+        </div>
+
+        <div class="person">
+            <img src="FAMILY TREE IMAGES/man.jpeg" alt="Person 2" class="responsive-image">
+            <h3>RAJAB</h3>
+            <p>Status: ALIVE</p>
+            <p>NIN: CM111111111111111</p>
+            <p>Phone: 987-654-3210</p>
+            <p>Email: jane@example.com</p>
+        </div>
+
+        <div class="person">
+            <img src="FAMILY TREE IMAGES/man.jpeg" alt="Person 2" class="responsive-image">
+            <h3>RAJAB</h3>
+            <p>Status: ALIVE</p>
+            <p>NIN: CM111111111111111</p>
+            <p>Phone: 987-654-3210</p>
+            <p>Email: jane@example.com</p>
+        </div>
+
+        <div class="person">
+            <img src="FAMILY TREE IMAGES/man.jpeg" alt="Person 2" class="responsive-image">
+            <h3>RAJAB</h3>
+            <p>Status: ALIVE</p>
+            <p>NIN: CM111111111111111</p>
+            <p>Phone: 987-654-3210</p>
+            <p>Email: jane@example.com</p>
+        </div>
+
+        <div class="person">
+            <img src="FAMILY TREE IMAGES/man.jpeg" alt="Person 2" class="responsive-image">
+            <h3>RAJAB</h3>
+            <p>Status: ALIVE</p>
+            <p>NIN: CM111111111111111</p>
+            <p>Phone: 987-654-3210</p>
+            <p>Email: jane@example.com</p>
+        </div>
+
+        <div class="person">
+            <img src="FAMILY TREE IMAGES/man.jpeg" alt="Person 2" class="responsive-image">
+            <h3>RAJAB</h3>
+            <p>Status: ALIVE</p>
+            <p>NIN: CM111111111111111</p>
+            <p>Phone: 987-654-3210</p>
+            <p>Email: jane@example.com</p>
+        </div>
+
+        <div class="person">
+            <img src="FAMILY TREE IMAGES/man.jpeg" alt="Person 2" class="responsive-image">
+            <h3>RAJAB</h3>
+            <p>Status: ALIVE</p>
+            <p>NIN: CM111111111111111</p>
+            <p>Phone: 987-654-3210</p>
+            <p>Email: jane@example.com</p>
+        </div>
+
+        <div class="person">
+            <img src="FAMILY TREE IMAGES/man.jpeg" alt="Person 2" class="responsive-image">
+            <h3>RAJAB</h3>
+            <p>Status: ALIVE</p>
+            <p>NIN: CM111111111111111</p>
+            <p>Phone: 987-654-3210</p>
+            <p>Email: jane@example.com</p>
+        </div>
+
+        <div class="person">
+            <img src="FAMILY TREE IMAGES/man.jpeg" alt="Person 2" class="responsive-image">
+            <h3>RAJAB</h3>
+            <p>Status: ALIVE</p>
+            <p>NIN: CM111111111111111</p>
+            <p>Phone: 987-654-3210</p>
+            <p>Email: jane@example.com</p>
+        </div>
+
+        <div class="person">
+            <img src="FAMILY TREE IMAGES/man.jpeg" alt="Person 2" class="responsive-image">
+            <h3>RAJAB</h3>
+            <p>Status: ALIVE</p>
+            <p>NIN: CM111111111111111</p>
+            <p>Phone: 987-654-3210</p>
+            <p>Email: jane@example.com</p>
+        </div>
+
+        <div class="person">
+            <img src="FAMILY TREE IMAGES/man.jpeg" alt="Person 2" class="responsive-image">
+            <h3>RAJAB</h3>
+            <p>Status: ALIVE</p>
+            <p>NIN: CM111111111111111</p>
+            <p>Phone: 987-654-3210</p>
+            <p>Email: jane@example.com</p>
+        </div>
+
+        <div class="person">
+            <img src="FAMILY TREE IMAGES/man.jpeg" alt="Person 2" class="responsive-image">
+            <h3>RAJAB</h3>
+            <p>Status: ALIVE</p>
+            <p>NIN: CM111111111111111</p>
+            <p>Phone: 987-654-3210</p>
+            <p>Email: jane@example.com</p>
+        </div>
+
+        <div class="person">
+            <img src="FAMILY TREE IMAGES/man.jpeg" alt="Person 2" class="responsive-image">
+            <h3>RAJAB</h3>
+            <p>Status: ALIVE</p>
+            <p>NIN: CM111111111111111</p>
+            <p>Phone: 987-654-3210</p>
+            <p>Email: jane@example.com</p>
+        </div>
+
+        <div class="person">
+            <img src="FAMILY TREE IMAGES/man.jpeg" alt="Person 2" class="responsive-image">
+            <h3>RAJAB</h3>
+            <p>Status: ALIVE</p>
+            <p>NIN: CM111111111111111</p>
+            <p>Phone: 987-654-3210</p>
+            <p>Email: jane@example.com</p>
+        </div>
+
+        <div class="person">
+            <img src="FAMILY TREE IMAGES/man.jpeg" alt="Person 2" class="responsive-image">
+            <h3>RAJAB</h3>
+            <p>Status: ALIVE</p>
+            <p>NIN: CM111111111111111</p>
+            <p>Phone: 987-654-3210</p>
+            <p>Email: jane@example.com</p>
+        </div>
+
+        <div class="person">
+            <img src="FAMILY TREE IMAGES/man.jpeg" alt="Person 2" class="responsive-image">
+            <h3>RAJAB</h3>
+            <p>Status: ALIVE</p>
+            <p>NIN: CM111111111111111</p>
+            <p>Phone: 987-654-3210</p>
+            <p>Email: jane@example.com</p>
+        </div>
+
+        <div class="person">
+            <img src="FAMILY TREE IMAGES/man.jpeg" alt="Person 2" class="responsive-image">
+            <h3>RAJAB</h3>
+            <p>Status: ALIVE</p>
+            <p>NIN: CM111111111111111</p>
+            <p>Phone: 987-654-3210</p>
+            <p>Email: jane@example.com</p>
+        </div>
+
+        <div class="person">
+            <img src="FAMILY TREE IMAGES/man.jpeg" alt="Person 2" class="responsive-image">
+            <h3>RAJAB</h3>
+            <p>Status: ALIVE</p>
+            <p>NIN: CM111111111111111</p>
+            <p>Phone: 987-654-3210</p>
+            <p>Email: jane@example.com</p>
+        </div>
+
+        <div class="person">
+            <img src="FAMILY TREE IMAGES/man.jpeg" alt="Person 2" class="responsive-image">
+            <h3>RAJAB</h3>
+            <p>Status: ALIVE</p>
+            <p>NIN: CM111111111111111</p>
+            <p>Phone: 987-654-3210</p>
+            <p>Email: jane@example.com</p>
+        </div>
+
+        <div class="person">
+            <img src="FAMILY TREE IMAGES/man.jpeg" alt="Person 2" class="responsive-image">
+            <h3>RAJAB</h3>
+            <p>Status: ALIVE</p>
+            <p>NIN: CM111111111111111</p>
+            <p>Phone: 987-654-3210</p>
+            <p>Email: jane@example.com</p>
+        </div>
+
+        <div class="person">
+            <img src="FAMILY TREE IMAGES/man.jpeg" alt="Person 2" class="responsive-image">
+            <h3>RAJAB</h3>
+            <p>Status: ALIVE</p>
+            <p>NIN: CM111111111111111</p>
+            <p>Phone: 987-654-3210</p>
+            <p>Email: jane@example.com</p>
+        </div>
+
+        <div class="person">
+            <img src="FAMILY TREE IMAGES/man.jpeg" alt="Person 2" class="responsive-image">
+            <h3>RAJAB</h3>
+            <p>Status: ALIVE</p>
+            <p>NIN: CM111111111111111</p>
+            <p>Phone: 987-654-3210</p>
+            <p>Email: jane@example.com</p>
+        </div>
+
+        <div class="person">
+            <img src="FAMILY TREE IMAGES/man.jpeg" alt="Person 2" class="responsive-image">
+            <h3>RAJAB</h3>
+            <p>Status: ALIVE</p>
+            <p>NIN: CM111111111111111</p>
+            <p>Phone: 987-654-3210</p>
+            <p>Email: jane@example.com</p>
+        </div>
+
+        <div class="person">
+            <img src="FAMILY TREE IMAGES/man.jpeg" alt="Person 2" class="responsive-image">
+            <h3>RAJAB</h3>
+            <p>Status: ALIVE</p>
+            <p>NIN: CM111111111111111</p>
+            <p>Phone: 987-654-3210</p>
+            <p>Email: jane@example.com</p>
+        </div>
+
+        <div class="person">
+            <img src="FAMILY TREE IMAGES/man.jpeg" alt="Person 2" class="responsive-image">
+            <h3>RAJAB</h3>
+            <p>Status: ALIVE</p>
+            <p>NIN: CM111111111111111</p>
+            <p>Phone: 987-654-3210</p>
+            <p>Email: jane@example.com</p>
+        </div>
+
+        <div class="person">
+            <img src="FAMILY TREE IMAGES/man.jpeg" alt="Person 2" class="responsive-image">
+            <h3>RAJAB</h3>
+            <p>Status: ALIVE</p>
+            <p>NIN: CM111111111111111</p>
+            <p>Phone: 987-654-3210</p>
+            <p>Email: jane@example.com</p>
+        </div>
+
+        <div class="person">
+            <img src="FAMILY TREE IMAGES/man.jpeg" alt="Person 2" class="responsive-image">
+            <h3>RAJAB</h3>
+            <p>Status: ALIVE</p>
+            <p>NIN: CM111111111111111</p>
+            <p>Phone: 987-654-3210</p>
+            <p>Email: jane@example.com</p>
+        </div>
+
+        <div class="person">
+            <img src="FAMILY TREE IMAGES/man.jpeg" alt="Person 2" class="responsive-image">
+            <h3>RAJAB</h3>
+            <p>Status: ALIVE</p>
+            <p>NIN: CM111111111111111</p>
+            <p>Phone: 987-654-3210</p>
+            <p>Email: jane@example.com</p>
+        </div>
+
+        <div class="person">
+            <img src="FAMILY TREE IMAGES/man.jpeg" alt="Person 2" class="responsive-image">
+            <h3>RAJAB</h3>
+            <p>Status: ALIVE</p>
+            <p>NIN: CM111111111111111</p>
+            <p>Phone: 987-654-3210</p>
+            <p>Email: jane@example.com</p>
+        </div>
+
+        <div class="person">
+            <img src="FAMILY TREE IMAGES/man.jpeg" alt="Person 2" class="responsive-image">
+            <h3>RAJAB</h3>
+            <p>Status: ALIVE</p>
+            <p>NIN: CM111111111111111</p>
+            <p>Phone: 987-654-3210</p>
+            <p>Email: jane@example.com</p>
+        </div>
+
+        <div class="person">
+            <img src="FAMILY TREE IMAGES/man.jpeg" alt="Person 2" class="responsive-image">
+            <h3>RAJAB</h3>
+            <p>Status: ALIVE</p>
+            <p>NIN: CM111111111111111</p>
+            <p>Phone: 987-654-3210</p>
+            <p>Email: jane@example.com</p>
+        </div>
+
+        <div class="person">
+            <img src="FAMILY TREE IMAGES/man.jpeg" alt="Person 2" class="responsive-image">
+            <h3>RAJAB</h3>
+            <p>Status: ALIVE</p>
+            <p>NIN: CM111111111111111</p>
+            <p>Phone: 987-654-3210</p>
+            <p>Email: jane@example.com</p>
+        </div>
+
+        <div class="person">
+            <img src="FAMILY TREE IMAGES/man.jpeg" alt="Person 2" class="responsive-image">
+            <h3>RAJAB</h3>
+            <p>Status: ALIVE</p>
+            <p>NIN: CM111111111111111</p>
+            <p>Phone: 987-654-3210</p>
+            <p>Email: jane@example.com</p>
+        </div>
+
+        <div class="person">
+            <img src="FAMILY TREE IMAGES/man.jpeg" alt="Person 2" class="responsive-image">
+            <h3>RAJAB</h3>
+            <p>Status: ALIVE</p>
+            <p>NIN: CM111111111111111</p>
+            <p>Phone: 987-654-3210</p>
+            <p>Email: jane@example.com</p>
+        </div>
+
+        <div class="person">
+            <img src="FAMILY TREE IMAGES/man.jpeg" alt="Person 2" class="responsive-image">
+            <h3>RAJAB</h3>
+            <p>Status: ALIVE</p>
+            <p>NIN: CM111111111111111</p>
+            <p>Phone: 987-654-3210</p>
+            <p>Email: jane@example.com</p>
+        </div>
+
+        <div class="person">
+            <img src="FAMILY TREE IMAGES/man.jpeg" alt="Person 2" class="responsive-image">
+            <h3>RAJAB</h3>
+            <p>Status: ALIVE</p>
+            <p>NIN: CM111111111111111</p>
+            <p>Phone: 987-654-3210</p>
+            <p>Email: jane@example.com</p>
+        </div>
+
+        <div class="person">
+            <img src="FAMILY TREE IMAGES/man.jpeg" alt="Person 2" class="responsive-image">
+            <h3>RAJAB</h3>
+            <p>Status: ALIVE</p>
+            <p>NIN: CM111111111111111</p>
+            <p>Phone: 987-654-3210</p>
+            <p>Email: jane@example.com</p>
+        </div>
+
+        <div class="person">
+            <img src="FAMILY TREE IMAGES/man.jpeg" alt="Person 2" class="responsive-image">
+            <h3>RAJAB</h3>
+            <p>Status: ALIVE</p>
+            <p>NIN: CM111111111111111</p>
+            <p>Phone: 987-654-3210</p>
+            <p>Email: jane@example.com</p>
+        </div>
+
+        <div class="person">
+            <img src="FAMILY TREE IMAGES/man.jpeg" alt="Person 2" class="responsive-image">
+            <h3>RAJAB</h3>
+            <p>Status: ALIVE</p>
+            <p>NIN: CM111111111111111</p>
+            <p>Phone: 987-654-3210</p>
+            <p>Email: jane@example.com</p>
+        </div>
+
+        <div class="person">
+            <img src="FAMILY TREE IMAGES/man.jpeg" alt="Person 2" class="responsive-image">
+            <h3>RAJAB</h3>
+            <p>Status: ALIVE</p>
+            <p>NIN: CM111111111111111</p>
+            <p>Phone: 987-654-3210</p>
+            <p>Email: jane@example.com</p>
+        </div>
+
+        <div class="person">
+            <img src="FAMILY TREE IMAGES/man.jpeg" alt="Person 2" class="responsive-image">
+            <h3>RAJAB</h3>
+            <p>Status: ALIVE</p>
+            <p>NIN: CM111111111111111</p>
+            <p>Phone: 987-654-3210</p>
+            <p>Email: jane@example.com</p>
+        </div>
+
+        <div class="person">
+            <img src="FAMILY TREE IMAGES/man.jpeg" alt="Person 2" class="responsive-image">
+            <h3>RAJAB</h3>
+            <p>Status: ALIVE</p>
+            <p>NIN: CM111111111111111</p>
+            <p>Phone: 987-654-3210</p>
+            <p>Email: jane@example.com</p>
+        </div>
+
+        <div class="person">
+            <img src="FAMILY TREE IMAGES/man.jpeg" alt="Person 2" class="responsive-image">
+            <h3>RAJAB</h3>
+            <p>Status: ALIVE</p>
+            <p>NIN: CM111111111111111</p>
+            <p>Phone: 987-654-3210</p>
+            <p>Email: jane@example.com</p>
+        </div>
+
+        <div class="person">
+            <img src="FAMILY TREE IMAGES/man.jpeg" alt="Person 2" class="responsive-image">
+            <h3>RAJAB</h3>
+            <p>Status: ALIVE</p>
+            <p>NIN: CM111111111111111</p>
+            <p>Phone: 987-654-3210</p>
+            <p>Email: jane@example.com</p>
+        </div>
+
+        <div class="person">
+            <img src="FAMILY TREE IMAGES/man.jpeg" alt="Person 2" class="responsive-image">
+            <h3>RAJAB</h3>
+            <p>Status: ALIVE</p>
+            <p>NIN: CM111111111111111</p>
+            <p>Phone: 987-654-3210</p>
+            <p>Email: jane@example.com</p>
+        </div>
+
+        <div class="person">
+            <img src="FAMILY TREE IMAGES/man.jpeg" alt="Person 2" class="responsive-image">
+            <h3>RAJAB</h3>
+            <p>Status: ALIVE</p>
+            <p>NIN: CM111111111111111</p>
+            <p>Phone: 987-654-3210</p>
+            <p>Email: jane@example.com</p>
+        </div>
+
+        <div class="person">
+            <img src="FAMILY TREE IMAGES/man.jpeg" alt="Person 2" class="responsive-image">
+            <h3>RAJAB</h3>
+            <p>Status: ALIVE</p>
+            <p>NIN: CM111111111111111</p>
+            <p>Phone: 987-654-3210</p>
+            <p>Email: jane@example.com</p>
+        </div>
+
+        <div class="person">
+            <img src="FAMILY TREE IMAGES/man.jpeg" alt="Person 2" class="responsive-image">
+            <h3>RAJAB</h3>
+            <p>Status: ALIVE</p>
+            <p>NIN: CM111111111111111</p>
+            <p>Phone: 987-654-3210</p>
+            <p>Email: jane@example.com</p>
+        </div>
+
+        <div class="person">
+            <img src="FAMILY TREE IMAGES/man.jpeg" alt="Person 2" class="responsive-image">
+            <h3>RAJAB</h3>
+            <p>Status: ALIVE</p>
+            <p>NIN: CM111111111111111</p>
+            <p>Phone: 987-654-3210</p>
+            <p>Email: jane@example.com</p>
+        </div>
+
+        <div class="person">
+            <img src="FAMILY TREE IMAGES/man.jpeg" alt="Person 2" class="responsive-image">
+            <h3>RAJAB</h3>
+            <p>Status: ALIVE</p>
+            <p>NIN: CM111111111111111</p>
+            <p>Phone: 987-654-3210</p>
+            <p>Email: jane@example.com</p>
+        </div>
+
+        <div class="person">
+            <img src="FAMILY TREE IMAGES/man.jpeg" alt="Person 2" class="responsive-image">
+            <h3>RAJAB</h3>
+            <p>Status: ALIVE</p>
+            <p>NIN: CM111111111111111</p>
+            <p>Phone: 987-654-3210</p>
+            <p>Email: jane@example.com</p>
+        </div>
+
+        <div class="person">
+            <img src="FAMILY TREE IMAGES/man.jpeg" alt="Person 2" class="responsive-image">
+            <h3>RAJAB</h3>
+            <p>Status: ALIVE</p>
+            <p>NIN: CM111111111111111</p>
+            <p>Phone: 987-654-3210</p>
+            <p>Email: jane@example.com</p>
+        </div>
+
+        <div class="person">
+            <img src="FAMILY TREE IMAGES/man.jpeg" alt="Person 2" class="responsive-image">
+            <h3>RAJAB</h3>
+            <p>Status: ALIVE</p>
+            <p>NIN: CM111111111111111</p>
+            <p>Phone: 987-654-3210</p>
+            <p>Email: jane@example.com</p>
+        </div>
+
+        <div class="person">
+            <img src="FAMILY TREE IMAGES/man.jpeg" alt="Person 2" class="responsive-image">
+            <h3>RAJAB</h3>
+            <p>Status: ALIVE</p>
+            <p>NIN: CM111111111111111</p>
+            <p>Phone: 987-654-3210</p>
+            <p>Email: jane@example.com</p>
+        </div>
+
+        <div class="person">
+            <img src="FAMILY TREE IMAGES/man.jpeg" alt="Person 2" class="responsive-image">
+            <h3>RAJAB</h3>
+            <p>Status: ALIVE</p>
+            <p>NIN: CM111111111111111</p>
+            <p>Phone: 987-654-3210</p>
+            <p>Email: jane@example.com</p>
+        </div>
+
+        <div class="person">
+            <img src="FAMILY TREE IMAGES/man.jpeg" alt="Person 2" class="responsive-image">
+            <h3>RAJAB</h3>
+            <p>Status: ALIVE</p>
+            <p>NIN: CM111111111111111</p>
+            <p>Phone: 987-654-3210</p>
+            <p>Email: jane@example.com</p>
+        </div>
+
+        <div class="person">
+            <img src="FAMILY TREE IMAGES/man.jpeg" alt="Person 2" class="responsive-image">
+            <h3>RAJAB</h3>
+            <p>Status: ALIVE</p>
+            <p>NIN: CM111111111111111</p>
+            <p>Phone: 987-654-3210</p>
+            <p>Email: jane@example.com</p>
+        </div>
+
+        <div class="person">
+            <img src="FAMILY TREE IMAGES/man.jpeg" alt="Person 2" class="responsive-image">
+            <h3>RAJAB</h3>
+            <p>Status: ALIVE</p>
+            <p>NIN: CM111111111111111</p>
+            <p>Phone: 987-654-3210</p>
+            <p>Email: jane@example.com</p>
+        </div>
+
+        <div class="person">
+            <img src="FAMILY TREE IMAGES/man.jpeg" alt="Person 2" class="responsive-image">
+            <h3>RAJAB</h3>
+            <p>Status: ALIVE</p>
+            <p>NIN: CM111111111111111</p>
+            <p>Phone: 987-654-3210</p>
+            <p>Email: jane@example.com</p>
+        </div>
+
+        <div class="person">
+            <img src="FAMILY TREE IMAGES/man.jpeg" alt="Person 2" class="responsive-image">
+            <h3>RAJAB</h3>
+            <p>Status: ALIVE</p>
+            <p>NIN: CM111111111111111</p>
+            <p>Phone: 987-654-3210</p>
+            <p>Email: jane@example.com</p>
+        </div>
+
+        <div class="person">
+            <img src="FAMILY TREE IMAGES/man.jpeg" alt="Person 2" class="responsive-image">
+            <h3>RAJAB</h3>
+            <p>Status: ALIVE</p>
+            <p>NIN: CM111111111111111</p>
+            <p>Phone: 987-654-3210</p>
+            <p>Email: jane@example.com</p>
+        </div>
+
+        <div class="person">
+            <img src="FAMILY TREE IMAGES/man.jpeg" alt="Person 2" class="responsive-image">
+            <h3>RAJAB</h3>
+            <p>Status: ALIVE</p>
+            <p>NIN: CM111111111111111</p>
+            <p>Phone: 987-654-3210</p>
+            <p>Email: jane@example.com</p>
+        </div>
+
+        <div class="person">
+            <img src="FAMILY TREE IMAGES/man.jpeg" alt="Person 2" class="responsive-image">
+            <h3>RAJAB</h3>
+            <p>Status: ALIVE</p>
+            <p>NIN: CM111111111111111</p>
+            <p>Phone: 987-654-3210</p>
+            <p>Email: jane@example.com</p>
+        </div>
+
+        <div class="person">
+            <img src="FAMILY TREE IMAGES/man.jpeg" alt="Person 2" class="responsive-image">
+            <h3>RAJAB</h3>
+            <p>Status: ALIVE</p>
+            <p>NIN: CM111111111111111</p>
+            <p>Phone: 987-654-3210</p>
+            <p>Email: jane@example.com</p>
+        </div>
+
+        <div class="person">
+            <img src="FAMILY TREE IMAGES/man.jpeg" alt="Person 2" class="responsive-image">
+            <h3>RAJAB</h3>
+            <p>Status: ALIVE</p>
+            <p>NIN: CM111111111111111</p>
+            <p>Phone: 987-654-3210</p>
+            <p>Email: jane@example.com</p>
+        </div>
+
+        <div class="person">
+            <img src="FAMILY TREE IMAGES/man.jpeg" alt="Person 2" class="responsive-image">
+            <h3>RAJAB</h3>
+            <p>Status: ALIVE</p>
+            <p>NIN: CM111111111111111</p>
+            <p>Phone: 987-654-3210</p>
+            <p>Email: jane@example.com</p>
+        </div>
+
+        <div class="person">
+            <img src="FAMILY TREE IMAGES/man.jpeg" alt="Person 2" class="responsive-image">
+            <h3>RAJAB</h3>
+            <p>Status: ALIVE</p>
+            <p>NIN: CM111111111111111</p>
+            <p>Phone: 987-654-3210</p>
+            <p>Email: jane@example.com</p>
+        </div>
+
+        <div class="person">
+            <img src="FAMILY TREE IMAGES/man.jpeg" alt="Person 2" class="responsive-image">
+            <h3>RAJAB</h3>
+            <p>Status: ALIVE</p>
+            <p>NIN: CM111111111111111</p>
+            <p>Phone: 987-654-3210</p>
+            <p>Email: jane@example.com</p>
+        </div>
+
+        <div class="person">
+            <img src="FAMILY TREE IMAGES/man.jpeg" alt="Person 2" class="responsive-image">
+            <h3>RAJAB</h3>
+            <p>Status: ALIVE</p>
+            <p>NIN: CM111111111111111</p>
+            <p>Phone: 987-654-3210</p>
+            <p>Email: jane@example.com</p>
+        </div>
+
+        <div class="person">
+            <img src="FAMILY TREE IMAGES/man.jpeg" alt="Person 2" class="responsive-image">
+            <h3>RAJAB</h3>
+            <p>Status: ALIVE</p>
+            <p>NIN: CM111111111111111</p>
+            <p>Phone: 987-654-3210</p>
+            <p>Email: jane@example.com</p>
+        </div>
+
+        <div class="person">
+            <img src="FAMILY TREE IMAGES/man.jpeg" alt="Person 2" class="responsive-image">
+            <h3>RAJAB</h3>
+            <p>Status: ALIVE</p>
+            <p>NIN: CM111111111111111</p>
+            <p>Phone: 987-654-3210</p>
+            <p>Email: jane@example.com</p>
+        </div>
+
+        <div class="person">
+            <img src="FAMILY TREE IMAGES/man.jpeg" alt="Person 2" class="responsive-image">
+            <h3>RAJAB</h3>
+            <p>Status: ALIVE</p>
+            <p>NIN: CM111111111111111</p>
+            <p>Phone: 987-654-3210</p>
+            <p>Email: jane@example.com</p>
+        </div>
+
+        <div class="person">
+            <img src="FAMILY TREE IMAGES/man.jpeg" alt="Person 2" class="responsive-image">
+            <h3>RAJAB</h3>
+            <p>Status: ALIVE</p>
+            <p>NIN: CM111111111111111</p>
+            <p>Phone: 987-654-3210</p>
+            <p>Email: jane@example.com</p>
+        </div>
+
+        <div class="person">
+            <img src="FAMILY TREE IMAGES/man.jpeg" alt="Person 2" class="responsive-image">
+            <h3>RAJAB</h3>
+            <p>Status: ALIVE</p>
+            <p>NIN: CM111111111111111</p>
+            <p>Phone: 987-654-3210</p>
+            <p>Email: jane@example.com</p>
+        </div>
+
+        <div class="person">
+            <img src="FAMILY TREE IMAGES/man.jpeg" alt="Person 2" class="responsive-image">
+            <h3>RAJAB</h3>
+            <p>Status: ALIVE</p>
+            <p>NIN: CM111111111111111</p>
+            <p>Phone: 987-654-3210</p>
+            <p>Email: jane@example.com</p>
+        </div>
+
+        <div class="person">
+            <img src="FAMILY TREE IMAGES/man.jpeg" alt="Person 2" class="responsive-image">
+            <h3>RAJAB</h3>
+            <p>Status: ALIVE</p>
+            <p>NIN: CM111111111111111</p>
+            <p>Phone: 987-654-3210</p>
+            <p>Email: jane@example.com</p>
+        </div>
+
+        <div class="person">
+            <img src="FAMILY TREE IMAGES/man.jpeg" alt="Person 2" class="responsive-image">
+            <h3>RAJAB</h3>
+            <p>Status: ALIVE</p>
+            <p>NIN: CM111111111111111</p>
+            <p>Phone: 987-654-3210</p>
+            <p>Email: jane@example.com</p>
+        </div>
+
+        <div class="person">
+            <img src="FAMILY TREE IMAGES/man.jpeg" alt="Person 2" class="responsive-image">
+            <h3>RAJAB</h3>
+            <p>Status: ALIVE</p>
+            <p>NIN: CM111111111111111</p>
+            <p>Phone: 987-654-3210</p>
+            <p>Email: jane@example.com</p>
+        </div>
+
+        <div class="person">
+            <img src="FAMILY TREE IMAGES/man.jpeg" alt="Person 2" class="responsive-image">
+            <h3>RAJAB</h3>
+            <p>Status: ALIVE</p>
+            <p>NIN: CM111111111111111</p>
+            <p>Phone: 987-654-3210</p>
+            <p>Email: jane@example.com</p>
+        </div>
+
+        <div class="person">
+            <img src="FAMILY TREE IMAGES/man.jpeg" alt="Person 2" class="responsive-image">
+            <h3>RAJAB</h3>
+            <p>Status: ALIVE</p>
+            <p>NIN: CM111111111111111</p>
+            <p>Phone: 987-654-3210</p>
+            <p>Email: jane@example.com</p>
+        </div>
+
+        <div class="person">
+            <img src="FAMILY TREE IMAGES/man.jpeg" alt="Person 2" class="responsive-image">
+            <h3>RAJAB</h3>
+            <p>Status: ALIVE</p>
+            <p>NIN: CM111111111111111</p>
+            <p>Phone: 987-654-3210</p>
+            <p>Email: jane@example.com</p>
+        </div>
+
+        <div class="person">
+            <img src="FAMILY TREE IMAGES/man.jpeg" alt="Person 2" class="responsive-image">
+            <h3>RAJAB</h3>
+            <p>Status: ALIVE</p>
+            <p>NIN: CM111111111111111</p>
+            <p>Phone: 987-654-3210</p>
+            <p>Email: jane@example.com</p>
+        </div>
+
+        <div class="person">
+            <img src="FAMILY TREE IMAGES/man.jpeg" alt="Person 2" class="responsive-image">
+            <h3>RAJAB</h3>
+            <p>Status: ALIVE</p>
+            <p>NIN: CM111111111111111</p>
+            <p>Phone: 987-654-3210</p>
+            <p>Email: jane@example.com</p>
+        </div>
+
+        <div class="person">
+            <img src="FAMILY TREE IMAGES/man.jpeg" alt="Person 2" class="responsive-image">
+            <h3>RAJAB</h3>
+            <p>Status: ALIVE</p>
+            <p>NIN: CM111111111111111</p>
+            <p>Phone: 987-654-3210</p>
+            <p>Email: jane@example.com</p>
+        </div>
+
+        <div class="person">
+            <img src="FAMILY TREE IMAGES/man.jpeg" alt="Person 2" class="responsive-image">
+            <h3>RAJAB</h3>
+            <p>Status: ALIVE</p>
+            <p>NIN: CM111111111111111</p>
+            <p>Phone: 987-654-3210</p>
+            <p>Email: jane@example.com</p>
+        </div>
+
+        <div class="person">
+            <img src="FAMILY TREE IMAGES/man.jpeg" alt="Person 2" class="responsive-image">
+            <h3>RAJAB</h3>
+            <p>Status: ALIVE</p>
+            <p>NIN: CM111111111111111</p>
+            <p>Phone: 987-654-3210</p>
+            <p>Email: jane@example.com</p>
+        </div>
+
+        <div class="person">
+            <img src="FAMILY TREE IMAGES/man.jpeg" alt="Person 2" class="responsive-image">
+            <h3>RAJAB</h3>
+            <p>Status: ALIVE</p>
+            <p>NIN: CM111111111111111</p>
+            <p>Phone: 987-654-3210</p>
+            <p>Email: jane@example.com</p>
+        </div>
+
+        <div class="person">
+            <img src="FAMILY TREE IMAGES/man.jpeg" alt="Person 2" class="responsive-image">
+            <h3>RAJAB</h3>
+            <p>Status: ALIVE</p>
+            <p>NIN: CM111111111111111</p>
+            <p>Phone: 987-654-3210</p>
+            <p>Email: jane@example.com</p>
+        </div>
+
+        <div class="person">
+            <img src="FAMILY TREE IMAGES/man.jpeg" alt="Person 2" class="responsive-image">
+            <h3>RAJAB</h3>
+            <p>Status: ALIVE</p>
+            <p>NIN: CM111111111111111</p>
+            <p>Phone: 987-654-3210</p>
+            <p>Email: jane@example.com</p>
+        </div>
+
+        <div class="person">
+            <img src="FAMILY TREE IMAGES/man.jpeg" alt="Person 2" class="responsive-image">
+            <h3>RAJAB</h3>
+            <p>Status: ALIVE</p>
+            <p>NIN: CM111111111111111</p>
+            <p>Phone: 987-654-3210</p>
+            <p>Email: jane@example.com</p>
+        </div>
+
+        <div class="person">
+            <img src="FAMILY TREE IMAGES/man.jpeg" alt="Person 2" class="responsive-image">
+            <h3>RAJAB</h3>
+            <p>Status: ALIVE</p>
+            <p>NIN: CM111111111111111</p>
+            <p>Phone: 987-654-3210</p>
+            <p>Email: jane@example.com</p>
+        </div>
+
+        <div class="person">
+            <img src="FAMILY TREE IMAGES/man.jpeg" alt="Person 2" class="responsive-image">
+            <h3>RAJAB</h3>
+            <p>Status: ALIVE</p>
+            <p>NIN: CM111111111111111</p>
+            <p>Phone: 987-654-3210</p>
+            <p>Email: jane@example.com</p>
+        </div>
+
+        <div class="person">
+            <img src="FAMILY TREE IMAGES/man.jpeg" alt="Person 2" class="responsive-image">
+            <h3>RAJAB</h3>
+            <p>Status: ALIVE</p>
+            <p>NIN: CM111111111111111</p>
+            <p>Phone: 987-654-3210</p>
+            <p>Email: jane@example.com</p>
+        </div>
+
+        <div class="person">
+            <img src="FAMILY TREE IMAGES/man.jpeg" alt="Person 2" class="responsive-image">
+            <h3>RAJAB</h3>
+            <p>Status: ALIVE</p>
+            <p>NIN: CM111111111111111</p>
+            <p>Phone: 987-654-3210</p>
+            <p>Email: jane@example.com</p>
+        </div>
+
+        <div class="person">
+            <img src="FAMILY TREE IMAGES/man.jpeg" alt="Person 2" class="responsive-image">
+            <h3>RAJAB</h3>
+            <p>Status: ALIVE</p>
+            <p>NIN: CM111111111111111</p>
+            <p>Phone: 987-654-3210</p>
+            <p>Email: jane@example.com</p>
+        </div>
+
+        <div class="person">
+            <img src="FAMILY TREE IMAGES/man.jpeg" alt="Person 2" class="responsive-image">
+            <h3>RAJAB</h3>
+            <p>Status: ALIVE</p>
+            <p>NIN: CM111111111111111</p>
+            <p>Phone: 987-654-3210</p>
+            <p>Email: jane@example.com</p>
+        </div>
+
+        <div class="person">
+            <img src="FAMILY TREE IMAGES/man.jpeg" alt="Person 2" class="responsive-image">
+            <h3>RAJAB</h3>
+            <p>Status: ALIVE</p>
+            <p>NIN: CM111111111111111</p>
+            <p>Phone: 987-654-3210</p>
+            <p>Email: jane@example.com</p>
+        </div>
+
+        <div class="person">
+            <img src="FAMILY TREE IMAGES/man.jpeg" alt="Person 2" class="responsive-image">
+            <h3>RAJAB</h3>
+            <p>Status: ALIVE</p>
+            <p>NIN: CM111111111111111</p>
+            <p>Phone: 987-654-3210</p>
+            <p>Email: jane@example.com</p>
+        </div>
+
+        <div class="person">
+            <img src="FAMILY TREE IMAGES/man.jpeg" alt="Person 2" class="responsive-image">
+            <h3>RAJAB</h3>
+            <p>Status: ALIVE</p>
+            <p>NIN: CM111111111111111</p>
+            <p>Phone: 987-654-3210</p>
+            <p>Email: jane@example.com</p>
+        </div>
+
+        <div class="person">
+            <img src="FAMILY TREE IMAGES/man.jpeg" alt="Person 2" class="responsive-image">
+            <h3>RAJAB</h3>
+            <p>Status: ALIVE</p>
+            <p>NIN: CM111111111111111</p>
+            <p>Phone: 987-654-3210</p>
+            <p>Email: jane@example.com</p>
+        </div>
+
+        <div class="person">
+            <img src="FAMILY TREE IMAGES/man.jpeg" alt="Person 2" class="responsive-image">
+            <h3>RAJAB</h3>
+            <p>Status: ALIVE</p>
+            <p>NIN: CM111111111111111</p>
+            <p>Phone: 987-654-3210</p>
+            <p>Email: jane@example.com</p>
+        </div>
+
+        <div class="person">
+            <img src="FAMILY TREE IMAGES/man.jpeg" alt="Person 2" class="responsive-image">
+            <h3>RAJAB</h3>
+            <p>Status: ALIVE</p>
+            <p>NIN: CM111111111111111</p>
+            <p>Phone: 987-654-3210</p>
+            <p>Email: jane@example.com</p>
+        </div>
+
+        <div class="person">
+            <img src="FAMILY TREE IMAGES/man.jpeg" alt="Person 2" class="responsive-image">
+            <h3>RAJAB</h3>
+            <p>Status: ALIVE</p>
+            <p>NIN: CM111111111111111</p>
+            <p>Phone: 987-654-3210</p>
+            <p>Email: jane@example.com</p>
+        </div>
+
+        <div class="person">
+            <img src="FAMILY TREE IMAGES/man.jpeg" alt="Person 2" class="responsive-image">
+            <h3>RAJAB</h3>
+            <p>Status: ALIVE</p>
+            <p>NIN: CM111111111111111</p>
+            <p>Phone: 987-654-3210</p>
+            <p>Email: jane@example.com</p>
+        </div>
+
+        <div class="person">
+            <img src="FAMILY TREE IMAGES/man.jpeg" alt="Person 2" class="responsive-image">
+            <h3>RAJAB</h3>
+            <p>Status: ALIVE</p>
+            <p>NIN: CM111111111111111</p>
+            <p>Phone: 987-654-3210</p>
+            <p>Email: jane@example.com</p>
+        </div>
+
+        <div class="person">
+            <img src="FAMILY TREE IMAGES/man.jpeg" alt="Person 2" class="responsive-image">
+            <h3>RAJAB</h3>
+            <p>Status: ALIVE</p>
+            <p>NIN: CM111111111111111</p>
+            <p>Phone: 987-654-3210</p>
+            <p>Email: jane@example.com</p>
+        </div>
+
+        <div class="person">
+            <img src="FAMILY TREE IMAGES/man.jpeg" alt="Person 2" class="responsive-image">
+            <h3>RAJAB</h3>
+            <p>Status: ALIVE</p>
+            <p>NIN: CM111111111111111</p>
+            <p>Phone: 987-654-3210</p>
+            <p>Email: jane@example.com</p>
+        </div>
+
+        <div class="person">
+            <img src="FAMILY TREE IMAGES/man.jpeg" alt="Person 2" class="responsive-image">
+            <h3>RAJAB</h3>
+            <p>Status: ALIVE</p>
+            <p>NIN: CM111111111111111</p>
+            <p>Phone: 987-654-3210</p>
+            <p>Email: jane@example.com</p>
+        </div>
+
+        <div class="person">
+            <img src="FAMILY TREE IMAGES/man.jpeg" alt="Person 2" class="responsive-image">
+            <h3>RAJAB</h3>
+            <p>Status: ALIVE</p>
+            <p>NIN: CM111111111111111</p>
+            <p>Phone: 987-654-3210</p>
+            <p>Email: jane@example.com</p>
+        </div>
+
+        <div class="person">
+            <img src="FAMILY TREE IMAGES/man.jpeg" alt="Person 2" class="responsive-image">
+            <h3>RAJAB</h3>
+            <p>Status: ALIVE</p>
+            <p>NIN: CM111111111111111</p>
+            <p>Phone: 987-654-3210</p>
+            <p>Email: jane@example.com</p>
+        </div>
+
+        <div class="person">
+            <img src="FAMILY TREE IMAGES/man.jpeg" alt="Person 2" class="responsive-image">
+            <h3>RAJAB</h3>
+            <p>Status: ALIVE</p>
+            <p>NIN: CM111111111111111</p>
+            <p>Phone: 987-654-3210</p>
+            <p>Email: jane@example.com</p>
+        </div>
+
+        <div class="person">
+            <img src="FAMILY TREE IMAGES/man.jpeg" alt="Person 2" class="responsive-image">
+            <h3>RAJAB</h3>
+            <p>Status: ALIVE</p>
+            <p>NIN: CM111111111111111</p>
+            <p>Phone: 987-654-3210</p>
+            <p>Email: jane@example.com</p>
+        </div>
+
+        <div class="person">
+            <img src="FAMILY TREE IMAGES/man.jpeg" alt="Person 2" class="responsive-image">
+            <h3>RAJAB</h3>
+            <p>Status: ALIVE</p>
+            <p>NIN: CM111111111111111</p>
+            <p>Phone: 987-654-3210</p>
+            <p>Email: jane@example.com</p>
+        </div>
+
+        <div class="person">
+            <img src="FAMILY TREE IMAGES/man.jpeg" alt="Person 2" class="responsive-image">
+            <h3>RAJAB</h3>
+            <p>Status: ALIVE</p>
+            <p>NIN: CM111111111111111</p>
+            <p>Phone: 987-654-3210</p>
+            <p>Email: jane@example.com</p>
+        </div>
+
+        <div class="person">
+            <img src="FAMILY TREE IMAGES/man.jpeg" alt="Person 2" class="responsive-image">
+            <h3>RAJAB</h3>
+            <p>Status: ALIVE</p>
+            <p>NIN: CM111111111111111</p>
+            <p>Phone: 987-654-3210</p>
+            <p>Email: jane@example.com</p>
+        </div>
+
+        <div class="person">
+            <img src="FAMILY TREE IMAGES/man.jpeg" alt="Person 2" class="responsive-image">
+            <h3>RAJAB</h3>
+            <p>Status: ALIVE</p>
+            <p>NIN: CM111111111111111</p>
+            <p>Phone: 987-654-3210</p>
+            <p>Email: jane@example.com</p>
+        </div>
+
+        <div class="person">
+            <img src="FAMILY TREE IMAGES/man.jpeg" alt="Person 2" class="responsive-image">
+            <h3>RAJAB</h3>
+            <p>Status: ALIVE</p>
+            <p>NIN: CM111111111111111</p>
+            <p>Phone: 987-654-3210</p>
+            <p>Email: jane@example.com</p>
+        </div>
+
+        <div class="person">
+            <img src="FAMILY TREE IMAGES/man.jpeg" alt="Person 2" class="responsive-image">
+            <h3>RAJAB</h3>
+            <p>Status: ALIVE</p>
+            <p>NIN: CM111111111111111</p>
+            <p>Phone: 987-654-3210</p>
+            <p>Email: jane@example.com</p>
+        </div>
+        <!-- Add more person divs as needed -->
+    </div>
+
+
+    
+
+    <!--new floating arrow-->
+    <div class="boxen" id="arrowUp">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+    
+
+    <!-- Footer Section 
+     <footer>
+        <-- Copyright information and disclaimers --
+        <p>&copy; 2023 My Family Tree Website. All rights reserved.</p>
+        <-- Links to privacy policy and terms of use pages --
+        <ul>
+            <li><a href="#privacy-policy">Privacy Policy</a></li>
+            <li><a href="#terms-of-use">Terms of Use</a></li>
+        </ul>
+    </footer>-->
+
+
+
+    <script src="images.js"></script>
+    
+</body>
+</html>

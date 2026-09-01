@@ -1,0 +1,219 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #fff;
+    background-size: cover;
+    background-position: center;
+}
+
+header {
+    position: fixed;
+    padding: 1.3rem 9%;
+}
+
+.logo h2 {
+    margin: 0;
+    font-size: 2em;
+    color: #fff;
+    user-select: none;
+    /* Add styles for the logo */
+}
+
+.navigation ul {
+    display: inline-block;
+    font-size: 1.1em;
+    color: #fff;
+    font-weight: 500;
+    margin-left: 135px;
+}
+
+/*.navigation ul li {
+    margin-right: 20px;
+}*/
+
+.navigation ul li:last-child {
+    margin-right: 0;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #333;
+    /* Add additional styles for the links */
+}
+
+
+.navigation li a {
+    position: relative;
+    font-size: 1.1em;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 10px;
+}
+
+
+.navigation li a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: #fff;
+    border-radius: 5px;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .5s;
+
+}
+
+.navigation li a:hover::after {
+    transform-origin: left;
+    transform: scaleX(1);
+    
+}
+
+.icons{
+    font-size: 2.0rem;
+    color: #fff;
+    cursor: pointer;
+    padding-left: 40px;
+    
+}
+
+
+
+/*about section*/
+#about {
+    margin-left: 3cm;
+    margin-right: 3cm;
+    margin-top: 5cm;
+    margin-bottom: 3cm;
+}
+  
+#about p {
+    text-align: justify;
+    position: relative;
+    color: #fff;
+    justify-content: center;
+    margin-top: 0;
+    margin-bottom: 1em;
+    overflow: hidden; /* Hide overflowed content */ 
+}
+
+
+/* Styles for the floating arrow */
+.arrow-up {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    line-height: 40px;
+    font-size: 24px;
+    cursor: pointer;
+    border-radius: 50%;
+    animation: floatUpDown .9s ease-in-out infinite alternate; /* Floating animation */
+}
+
+/* Define floating animation */
+@keyframes floatUpDown {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-10px); /* Adjust this value for desired floating height */
+    }
+}
+
+.arrow-up:hover {
+    background-color: blue;
+}
+
+
+
+/* Add any additional styles or adjustments as per your design */
+  
+
+/* Footer Section styles */
+.footer {
+    background-color: #4CAF50;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    justify-content:space-between;
+}
+  
+.footer ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+  
+.footer ul li {
+    display: inline-block;
+    margin-right: 20px;
+}
+  
+.footer ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+
+/* media screen responsiveness */
+@media (max-width: 1124px) {
+    .navigation ul li  {
+        font-size: 1.0rem;
+    }     
+}
+
+@media (max-width: 1034px) {
+    .navigation ul li  {
+        font-size: .9rem;
+    }     
+}
+
+@media (max-width: 1034px) {
+    #about {
+        margin-left: 2cm;
+        margin-right: 2cm;
+        margin-top: 4cm;
+        margin-bottom: 2cm;
+    }
+}
+@media (max-width: 992px) {
+   
+
+    .navigation ul {
+        margin-left: 0px;
+    }
+
+    
+}
+ 
+@media (max-width: 422px) {
+    #about {
+        margin-left: 1cm;
+        margin-right: 1cm;
+        margin-top: 3cm;
+        margin-bottom: 1cm;
+    }
+}
