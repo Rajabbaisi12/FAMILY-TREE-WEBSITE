@@ -24,17 +24,17 @@ iconClose.addEventListener('click',()=>{
 
 // JavaScript to handle video playback and interactions
 
-// Get the video element
 const video = document.querySelector('video');
 
-// Function to play/pause the video when clicked
-video.addEventListener('click', () => {
-  if (video.paused) {
-    video.play();
-  } else {
-    video.pause();
-  }
-});
+if (video) {
+  video.addEventListener('click', () => {
+    if (video.paused) {
+      video.play();
+    } else {
+      video.pause();
+    }
+  });
+}
 
 // Optional: Add any additional JavaScript functionalities or interactions for your video
 
