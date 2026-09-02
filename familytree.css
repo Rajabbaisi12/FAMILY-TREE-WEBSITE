@@ -386,11 +386,27 @@ header {
     }
 
     #searchInput {
-        margin-left: 418px; /* Adjust this margin to position the search bar accordingly */
-        width: 17%;
+        display: block;
+        width: calc(100% - 2rem);
+        margin: 1rem auto 0.5rem;
         font-size: 16px;
-        
-    }    
+    }
+
+    #searchButton,
+    .clear-search {
+        margin: 0.25rem 4px 0;
+    }
+
+    #searchStatus {
+        display: block;
+        width: fit-content;
+        margin: 0.5rem auto;
+    }
+
+    #check:checked~.navigation ul {
+        height: calc(100vh - 5rem);
+        overflow-y: auto;
+    }
 }
 
 @media (max-width: 802px){
