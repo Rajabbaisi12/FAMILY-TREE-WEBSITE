@@ -86,11 +86,18 @@ $(document).ready(function () {
     function expandAncestors($member) {
         if (!$member || !$member.length) return;
 
-        $member.parents('ul').show();
-        $member.parents('li').show();
+        $('.genealogy-tree ul').not('.genealogy-tree > ul').hide();
+        $('.genealogy-tree > ul').show();
+
+        let $ancestor = $member.parent().closest('li');
+        while ($ancestor.length) {
+            $ancestor.children('ul').show();
+            $ancestor.show();
+            $ancestor = $ancestor.parent().closest('li');
+        }
+
         $member.show();
         $member.closest('li').show();
-        $member.parents('ul').addClass('active');
     }
 
     function revealPerson($member) {
