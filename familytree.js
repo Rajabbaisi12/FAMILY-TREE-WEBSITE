@@ -89,26 +89,46 @@ $(document).ready(function () {
 
         $('.genealogy-tree li').hide();
         $('.genealogy-tree > ul').show();
-        $('.genealogy-tree > ul > li').show();
 
-        const path = [];
+        const relevantNodes = new Set();
+        const siblingNodes = new Set();
+
+        function addNode($node) {
+            if (!$node || !$node.length) return;
+            relevantNodes.add($node[0]);
+        }
+
         let $current = $member;
-
         while ($current && $current.length) {
-            path.push($current[0]);
+            addNode($current);
+
+            const $siblingList = $current.parent('ul');
+            if ($siblingList.length) {
+                $siblingList.children('li').each(function () {
+                    addNode($(this));
+                    if ($current[0] === $member[0]) {
+                        siblingNodes.add(this);
+                    }
+                });
+            }
+
             $current = $current.parent().closest('li');
         }
 
-        path.forEach(function (node) {
+        relevantNodes.forEach(function (node) {
             const $node = $(node);
             $node.addClass('searched-path');
             $node.show();
-            $node.children('ul').show();
+            $node.parent('ul').show();
+            $node.parents('ul').show();
+            if (!siblingNodes.has(node) || node === $member[0]) {
+                $node.children('ul').show();
+            }
         });
 
-        const $root = $('.genealogy-tree > ul');
-        $root.show();
-        $root.find('> li').show();
+        siblingNodes.forEach(function (node) {
+            $(node).show();
+        });
     }
 
     function revealPerson($member) {
