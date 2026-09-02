@@ -86,18 +86,27 @@ $(document).ready(function () {
     function expandAncestors($member) {
         if (!$member || !$member.length) return;
 
-        $('.genealogy-tree ul').not('.genealogy-tree > ul').hide();
+        $('.genealogy-tree li').hide();
         $('.genealogy-tree > ul').show();
+        $('.genealogy-tree > ul > li').show();
 
-        let $ancestor = $member.parent().closest('li');
-        while ($ancestor.length) {
-            $ancestor.children('ul').show();
-            $ancestor.show();
-            $ancestor = $ancestor.parent().closest('li');
+        const path = [];
+        let $current = $member;
+
+        while ($current && $current.length) {
+            path.push($current[0]);
+            $current = $current.parent().closest('li');
         }
 
-        $member.show();
-        $member.closest('li').show();
+        path.forEach(function (node) {
+            const $node = $(node);
+            $node.show();
+            $node.children('ul').show();
+        });
+
+        const $root = $('.genealogy-tree > ul');
+        $root.show();
+        $root.find('> li').show();
     }
 
     function revealPerson($member) {
