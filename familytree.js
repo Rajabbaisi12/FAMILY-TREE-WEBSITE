@@ -56,67 +56,101 @@ document.addEventListener('DOMContentLoaded', function() {
   
 
 
-//new code
 $(document).ready(function () {
-    const datalist = $('#nameOptions');
-    const members = $('.genealogy-tree li');
+    const $searchInput = $('#searchInput');
+    const $searchButton = $('#searchButton');
+    const $datalist = $('#nameOptions');
+    const $members = $('.genealogy-tree li');
 
-    // Collect names from the family tree
-    const names = members.map(function () {
-        return $(this).data('name');
-    }).get();
-
-    // Handle input for suggestions
-    $('#searchInput').on('input', function () {
-        const searchTerm = $(this).val().toLowerCase();
-
-        // Clear existing options
-        datalist.empty();
-
-        // Filter names based on input and populate datalist
-        const filteredNames = names.filter(name => name.toLowerCase().includes(searchTerm));
-        filteredNames.forEach(name => {
-            datalist.append(`<option value="${name}">`);
-        });
-
-        // Remove existing highlights
-        $('.highlight').removeClass('highlight');
-
-        // Highlight matched elements
-        members.each(function () {
-            const memberName = $(this).data('name').toLowerCase();
-            if (memberName.includes(searchTerm)) {
-                $(this).find('.member-details h3').addClass('highlight');
-            }
-        });
+    $members.each(function () {
+        const $member = $(this);
+        const personName = $member.find('.member-details h3').first().text().trim();
+        if (personName) {
+            $member.attr('data-name', personName);
+        }
     });
 
-    // Scroll to selected person when pressing Enter
-    $('#searchInput').on('keypress', function (e) {
-        if (e.which === 13) { // Enter key
-            const searchTerm = $(this).val().toLowerCase();
+    function clearHighlight() {
+        $('.highlight').removeClass('highlight');
+    }
 
-            if (searchTerm === "") {
-                return;
+    function revealPerson($member) {
+        if (!$member || !$member.length) return false;
+
+        clearHighlight();
+
+        $member.parents('ul').show().addClass('active');
+        $member.closest('li').show();
+        $member.find('.member-details h3').first().addClass('highlight');
+
+        const targetTop = $member.offset().top - $('header').outerHeight() - 30;
+        $('html, body').animate({ scrollTop: targetTop }, 'fast');
+        return true;
+    }
+
+    function findMatchingMember(searchTerm) {
+        const value = (searchTerm || '').trim().toLowerCase();
+        if (!value) return null;
+
+        let found = null;
+
+        $members.each(function () {
+            const memberName = ($(this).attr('data-name') || '').toLowerCase();
+            if (memberName.includes(value)) {
+                found = $(this);
+                return false;
             }
+        });
 
-            // Remove existing highlights
-            $('.highlight').removeClass('highlight');
+        return found;
+    }
 
-            // Scroll to the first matched element
-            members.each(function () {
-                const memberName = $(this).data('name').toLowerCase();
-                if (memberName.includes(searchTerm)) {
-                    $(this).find('.member-details h3').addClass('highlight');
+    function handleSearch() {
+        const searchTerm = $searchInput.val();
+        const match = findMatchingMember(searchTerm);
 
-                    // Scroll to the member
-                    $('html, body').animate({
-                        scrollTop: $(this).offset().top - $('header').outerHeight()
-                    }, 'fast');
+        if (!match) {
+            clearHighlight();
+            alert('Name not found in the family tree.');
+            return;
+        }
 
-                    return false; // Stop after finding the first match
-                }
-            });
+        revealPerson(match);
+    }
+
+    $searchInput.on('input', function () {
+        const searchTerm = $(this).val().trim().toLowerCase();
+        $datalist.empty();
+
+        if (!searchTerm) {
+            clearHighlight();
+            return;
+        }
+
+        const matches = $members
+            .map(function () {
+                const name = ($(this).attr('data-name') || '').toLowerCase();
+                return name.includes(searchTerm) ? $(this).attr('data-name') : null;
+            })
+            .get()
+            .filter(Boolean);
+
+        const uniqueMatches = [...new Set(matches)];
+        uniqueMatches.forEach(function (name) {
+            $datalist.append(`<option value="${name}">`);
+        });
+
+        const firstMatch = findMatchingMember(searchTerm);
+        if (firstMatch) {
+            revealPerson(firstMatch);
+        }
+    });
+
+    $searchButton.on('click', handleSearch);
+    $searchInput.on('keydown', function (event) {
+        if (event.key === 'Enter') {
+            event.preventDefault();
+            handleSearch();
         }
     });
 });
