@@ -61,29 +61,21 @@ $(document).ready(function () {
     const $searchButton = $('#searchButton');
     const $clearSearchButton = $('#clearSearchButton');
     const $datalist = $('#nameOptions');
-    const $members = $('.genealogy-tree li');
     const $status = $('#searchStatus');
     const $suggestions = $('#searchSuggestions');
+    const $memberHeaders = $('.member-details h3');
     let activeSuggestionIndex = -1;
 
     function normalizeName(name) {
         return (name || '').toString().trim().replace(/\s+/g, ' ').toLowerCase();
     }
 
-    $members.each(function () {
-        const $member = $(this);
-        const personName = $member.find('.member-details h3').first().text().trim();
-        if (personName) {
-            $member.attr('data-name', personName);
-        }
-    });
+    function showStatus(message) {
+        $status.text(message || '');
+    }
 
     function clearHighlight() {
         $('.highlight').removeClass('highlight');
-    }
-
-    function showStatus(message) {
-        $status.text(message || '');
     }
 
     function hideSuggestions() {
@@ -91,14 +83,26 @@ $(document).ready(function () {
         activeSuggestionIndex = -1;
     }
 
+    function expandAncestors($member) {
+        if (!$member || !$member.length) return;
+
+        $member.parents('ul').show();
+        $member.parents('li').show();
+        $member.show();
+        $member.closest('li').show();
+        $member.parents('ul').addClass('active');
+    }
+
     function revealPerson($member) {
         if (!$member || !$member.length) return false;
 
         clearHighlight();
+        expandAncestors($member);
 
-        $member.parents('ul').show().addClass('active');
-        $member.closest('li').show();
-        $member.find('.member-details h3').first().addClass('highlight');
+        const $heading = $member.find('.member-details h3').first();
+        if ($heading.length) {
+            $heading.addClass('highlight');
+        }
 
         const targetTop = $member.offset().top - $('header').outerHeight() - 30;
         $('html, body').animate({ scrollTop: targetTop }, 'fast');
@@ -110,14 +114,14 @@ $(document).ready(function () {
         if (!value) return null;
 
         let bestMatch = null;
-        let bestScore = 0;
+        let bestScore = -1;
 
-        $members.each(function () {
-            const memberName = normalizeName($(this).attr('data-name'));
+        $memberHeaders.each(function () {
+            const memberName = normalizeName($(this).text());
             if (!memberName) return;
 
             if (memberName === value) {
-                bestMatch = $(this);
+                bestMatch = $(this).closest('li');
                 bestScore = 100;
                 return false;
             }
@@ -125,7 +129,7 @@ $(document).ready(function () {
             if (memberName.includes(value)) {
                 const score = value.length / memberName.length;
                 if (score > bestScore) {
-                    bestMatch = $(this);
+                    bestMatch = $(this).closest('li');
                     bestScore = score;
                 }
             }
@@ -143,14 +147,14 @@ $(document).ready(function () {
             return [];
         }
 
-        const matches = $members
-            .map(function () {
-                const name = $(this).attr('data-name');
-                if (!name) return null;
-                return normalizeName(name).includes(searchTerm) ? name : null;
-            })
-            .get()
-            .filter(Boolean);
+        const matches = [];
+        $memberHeaders.each(function () {
+            const name = $(this).text().trim();
+            if (!name) return;
+            if (normalizeName(name).includes(searchTerm)) {
+                matches.push(name);
+            }
+        });
 
         const uniqueMatches = [...new Set(matches)];
 
@@ -162,7 +166,7 @@ $(document).ready(function () {
                 const selected = findMatchingMember(name);
                 if (selected) {
                     revealPerson(selected);
-                    showStatus('Showing: ' + selected.attr('data-name'));
+                    showStatus('Showing: ' + name);
                 }
                 hideSuggestions();
             });
@@ -201,7 +205,7 @@ $(document).ready(function () {
         }
 
         revealPerson(match);
-        showStatus('Showing: ' + match.attr('data-name'));
+        showStatus('Showing: ' + match.find('.member-details h3').first().text().trim());
         hideSuggestions();
     }
 
@@ -219,7 +223,7 @@ $(document).ready(function () {
         const firstMatch = findMatchingMember(searchTerm);
         if (firstMatch) {
             revealPerson(firstMatch);
-            showStatus('Showing suggestion: ' + firstMatch.attr('data-name'));
+            showStatus('Showing suggestion: ' + firstMatch.find('.member-details h3').first().text().trim());
         }
     });
 
