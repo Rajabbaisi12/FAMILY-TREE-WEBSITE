@@ -61,6 +61,11 @@ $(document).ready(function () {
     const $searchButton = $('#searchButton');
     const $datalist = $('#nameOptions');
     const $members = $('.genealogy-tree li');
+    const $status = $('#searchStatus');
+
+    function normalizeName(name) {
+        return (name || '').toString().trim().replace(/\s+/g, ' ').toLowerCase();
+    }
 
     $members.each(function () {
         const $member = $(this);
@@ -72,6 +77,10 @@ $(document).ready(function () {
 
     function clearHighlight() {
         $('.highlight').removeClass('highlight');
+    }
+
+    function showStatus(message) {
+        $status.text(message || '');
     }
 
     function revealPerson($member) {
@@ -89,47 +98,69 @@ $(document).ready(function () {
     }
 
     function findMatchingMember(searchTerm) {
-        const value = (searchTerm || '').trim().toLowerCase();
+        const value = normalizeName(searchTerm);
         if (!value) return null;
 
-        let found = null;
+        let bestMatch = null;
+        let bestScore = 0;
 
         $members.each(function () {
-            const memberName = ($(this).attr('data-name') || '').toLowerCase();
-            if (memberName.includes(value)) {
-                found = $(this);
+            const memberName = normalizeName($(this).attr('data-name'));
+            if (!memberName) return;
+
+            if (memberName === value) {
+                bestMatch = $(this);
+                bestScore = 100;
                 return false;
+            }
+
+            if (memberName.includes(value)) {
+                const score = value.length / memberName.length;
+                if (score > bestScore) {
+                    bestMatch = $(this);
+                    bestScore = score;
+                }
             }
         });
 
-        return found;
+        return bestMatch;
     }
 
     function handleSearch() {
         const searchTerm = $searchInput.val();
+        const value = normalizeName(searchTerm);
+
+        if (!value) {
+            clearHighlight();
+            showStatus('Type a family name to search the tree.');
+            return;
+        }
+
         const match = findMatchingMember(searchTerm);
 
         if (!match) {
             clearHighlight();
-            alert('Name not found in the family tree.');
+            showStatus('No matching person found for: ' + searchTerm.trim());
             return;
         }
 
         revealPerson(match);
+        showStatus('Showing: ' + match.attr('data-name'));
     }
 
     $searchInput.on('input', function () {
-        const searchTerm = $(this).val().trim().toLowerCase();
+        const searchTerm = normalizeName($(this).val());
         $datalist.empty();
 
         if (!searchTerm) {
             clearHighlight();
+            showStatus('');
             return;
         }
 
         const matches = $members
             .map(function () {
-                const name = ($(this).attr('data-name') || '').toLowerCase();
+                const name = normalizeName($(this).attr('data-name'));
                 return name.includes(searchTerm) ? $(this).attr('data-name') : null;
             })
             .get()
@@ -140,9 +171,11 @@ $(document).ready(function () {
             $datalist.append(`<option value="${name}">`);
         });
 
+        $('.highlight').removeClass('highlight');
         const firstMatch = findMatchingMember(searchTerm);
         if (firstMatch) {
             revealPerson(firstMatch);
+            showStatus('Showing suggestion: ' + firstMatch.attr('data-name'));
         }
     });
 

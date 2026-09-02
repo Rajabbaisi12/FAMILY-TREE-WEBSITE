@@ -84,6 +84,18 @@ header {
     background: #a9151d;
 }
 
+#searchStatus {
+    margin-left: 20px;
+    margin-top: 8px;
+    font-size: 0.8rem;
+    color: #fff;
+    background: rgba(22, 41, 56, 0.7);
+    padding: 6px 10px;
+    border-radius: 6px;
+    display: inline-block;
+    min-height: 24px;
+}
+
 /* Style for the highlighted name */
 .highlight h3 {
     background-color: red;
