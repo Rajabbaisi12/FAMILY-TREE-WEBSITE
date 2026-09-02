@@ -161,6 +161,18 @@ header {
     text-shadow: 0 1px 0 rgba(0,0,0,0.25) !important;
 }
 
+.genealogy-tree li.searched-path::before,
+.genealogy-tree li.searched-path::after,
+.genealogy-tree li.searched-path > ul::before {
+    border-color: #ff1a1a !important;
+}
+
+.genealogy-tree li.searched-path .member-details h3 {
+    color: #ff1010 !important;
+    font-weight: 900 !important;
+    text-shadow: 0 0 8px rgba(255, 16, 16, 0.35);
+}
+
 .genealogy-tree .member-details h3 {
     color: #000000;
     font-weight: 700;

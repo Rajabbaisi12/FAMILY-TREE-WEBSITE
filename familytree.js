@@ -76,6 +76,7 @@ $(document).ready(function () {
 
     function clearHighlight() {
         $('.highlight').removeClass('highlight');
+        $('.searched-path').removeClass('searched-path');
     }
 
     function hideSuggestions() {
@@ -100,6 +101,7 @@ $(document).ready(function () {
 
         path.forEach(function (node) {
             const $node = $(node);
+            $node.addClass('searched-path');
             $node.show();
             $node.children('ul').show();
         });
