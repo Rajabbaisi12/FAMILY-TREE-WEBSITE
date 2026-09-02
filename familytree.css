@@ -245,7 +245,7 @@ header {
     float: left; text-align: center;
     list-style-type: none;
     position: relative;
-    padding: 20px 5px 0 5px;
+    padding: 12px 5px 0 5px;
 }
 .genealogy-tree li::before, .genealogy-tree li::after{
     content: '';
@@ -254,7 +254,7 @@ header {
     right: 50%;
     border-top: 4px solid #ccc;
     width: 50%; 
-    height: 18px;
+    height: 12px;
 }
 .genealogy-tree li::after{
     right: auto; left: 50%;
@@ -284,7 +284,7 @@ header {
     content: '';
     position: absolute; top: 0; left: 50%;
     border-left: 4px solid #ccc;
-    width: 0; height: 20px;
+    width: 0; height: 12px;
 }
 .genealogy-tree li a{
     text-decoration: none;
