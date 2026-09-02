@@ -59,9 +59,12 @@ document.addEventListener('DOMContentLoaded', function() {
 $(document).ready(function () {
     const $searchInput = $('#searchInput');
     const $searchButton = $('#searchButton');
+    const $clearSearchButton = $('#clearSearchButton');
     const $datalist = $('#nameOptions');
     const $members = $('.genealogy-tree li');
     const $status = $('#searchStatus');
+    const $suggestions = $('#searchSuggestions');
+    let activeSuggestionIndex = -1;
 
     function normalizeName(name) {
         return (name || '').toString().trim().replace(/\s+/g, ' ').toLowerCase();
@@ -81,6 +84,11 @@ $(document).ready(function () {
 
     function showStatus(message) {
         $status.text(message || '');
+    }
+
+    function hideSuggestions() {
+        $suggestions.removeClass('visible').empty();
+        activeSuggestionIndex = -1;
     }
 
     function revealPerson($member) {
@@ -126,6 +134,52 @@ $(document).ready(function () {
         return bestMatch;
     }
 
+    function populateSuggestions(searchTerm) {
+        $datalist.empty();
+        $suggestions.empty();
+
+        if (!searchTerm) {
+            hideSuggestions();
+            return [];
+        }
+
+        const matches = $members
+            .map(function () {
+                const name = $(this).attr('data-name');
+                if (!name) return null;
+                return normalizeName(name).includes(searchTerm) ? name : null;
+            })
+            .get()
+            .filter(Boolean);
+
+        const uniqueMatches = [...new Set(matches)];
+
+        uniqueMatches.forEach(function (name) {
+            $datalist.append(`<option value="${name}">`);
+            const $button = $('<button type="button" class="search-suggestion">').text(name);
+            $button.on('click', function () {
+                $searchInput.val(name);
+                const selected = findMatchingMember(name);
+                if (selected) {
+                    revealPerson(selected);
+                    showStatus('Showing: ' + selected.attr('data-name'));
+                }
+                hideSuggestions();
+            });
+            $suggestions.append($button);
+        });
+
+        if (uniqueMatches.length) {
+            $suggestions.addClass('visible');
+            $suggestions.find('.search-suggestion').first().addClass('active');
+            activeSuggestionIndex = 0;
+        } else {
+            hideSuggestions();
+        }
+
+        return uniqueMatches;
+    }
+
     function handleSearch() {
         const searchTerm = $searchInput.val();
         const value = normalizeName(searchTerm);
@@ -133,6 +187,7 @@ $(document).ready(function () {
         if (!value) {
             clearHighlight();
             showStatus('Type a family name to search the tree.');
+            hideSuggestions();
             return;
         }
 
@@ -140,38 +195,27 @@ $(document).ready(function () {
 
         if (!match) {
             clearHighlight();
+            hideSuggestions();
             showStatus('No matching person found for: ' + searchTerm.trim());
             return;
         }
 
         revealPerson(match);
         showStatus('Showing: ' + match.attr('data-name'));
+        hideSuggestions();
     }
 
     $searchInput.on('input', function () {
         const searchTerm = normalizeName($(this).val());
-        $datalist.empty();
-
         if (!searchTerm) {
             clearHighlight();
             showStatus('');
+            hideSuggestions();
             return;
         }
 
-        const matches = $members
-            .map(function () {
-                const name = normalizeName($(this).attr('data-name'));
-                return name.includes(searchTerm) ? $(this).attr('data-name') : null;
-            })
-            .get()
-            .filter(Boolean);
+        populateSuggestions(searchTerm);
 
-        const uniqueMatches = [...new Set(matches)];
-        uniqueMatches.forEach(function (name) {
-            $datalist.append(`<option value="${name}">`);
-        });
-
-        $('.highlight').removeClass('highlight');
         const firstMatch = findMatchingMember(searchTerm);
         if (firstMatch) {
             revealPerson(firstMatch);
@@ -180,10 +224,45 @@ $(document).ready(function () {
     });
 
     $searchButton.on('click', handleSearch);
+    $clearSearchButton.on('click', function () {
+        $searchInput.val('');
+        clearHighlight();
+        showStatus('');
+        hideSuggestions();
+    });
+
     $searchInput.on('keydown', function (event) {
+        const suggestionItems = $suggestions.find('.search-suggestion');
+
         if (event.key === 'Enter') {
             event.preventDefault();
-            handleSearch();
+            if (activeSuggestionIndex >= 0 && suggestionItems.length) {
+                suggestionItems.eq(activeSuggestionIndex).trigger('click');
+            } else {
+                handleSearch();
+            }
+            return;
+        }
+
+        if (event.key === 'ArrowDown' && suggestionItems.length) {
+            event.preventDefault();
+            activeSuggestionIndex = (activeSuggestionIndex + 1) % suggestionItems.length;
+            suggestionItems.removeClass('active');
+            suggestionItems.eq(activeSuggestionIndex).addClass('active');
+            return;
+        }
+
+        if (event.key === 'ArrowUp' && suggestionItems.length) {
+            event.preventDefault();
+            activeSuggestionIndex = (activeSuggestionIndex <= 0) ? suggestionItems.length - 1 : activeSuggestionIndex - 1;
+            suggestionItems.removeClass('active');
+            suggestionItems.eq(activeSuggestionIndex).addClass('active');
+            return;
+        }
+
+        if (event.key === 'Escape') {
+            hideSuggestions();
+            showStatus('');
         }
     });
 });

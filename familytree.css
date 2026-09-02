@@ -84,6 +84,22 @@ header {
     background: #a9151d;
 }
 
+.clear-search {
+    margin-left: 8px;
+    padding: 10px 14px;
+    font-size: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 5px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.clear-search:hover {
+    background: rgba(255, 255, 255, 0.18);
+}
+
 #searchStatus {
     margin-left: 20px;
     margin-top: 8px;
@@ -94,6 +110,39 @@ header {
     border-radius: 6px;
     display: inline-block;
     min-height: 24px;
+}
+
+.search-suggestions {
+    position: absolute;
+    top: 64px;
+    left: 0;
+    width: 320px;
+    background: rgba(255, 255, 255, 0.96);
+    border-radius: 8px;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
+    overflow: hidden;
+    display: none;
+    z-index: 100;
+}
+
+.search-suggestions.visible {
+    display: block;
+}
+
+.search-suggestion {
+    width: 100%;
+    border: none;
+    background: transparent;
+    text-align: left;
+    padding: 10px 12px;
+    font-size: 0.95rem;
+    cursor: pointer;
+    color: #1c1c1c;
+}
+
+.search-suggestion:hover,
+.search-suggestion.active {
+    background: #f3e2e2;
 }
 
 /* Style for the highlighted name */
